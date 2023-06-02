@@ -8,6 +8,7 @@ flask = "*"
 python-dotenv = "*"
 scikit-learn = "*"
 flask-wtf = "*"
+pandas = "*"
 
 [dev-packages]
 
