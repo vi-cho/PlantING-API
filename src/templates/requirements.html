@@ -1,0 +1,160 @@
+<h1>Filtros</h1>
+
+<div>
+    <form action="" method="post" novalidate>
+        {{ form.hidden_tag() }}
+        <div>
+            {{ form.comuna.label }}
+            {{ form.comuna }}<br>
+            {% for error in form.comuna.errors %}
+            <span style="color: red;">{{ error }}</span>
+            {% endfor %}
+        </div>
+        <div>
+            {{ form.ancho.label }}
+            {{ form.ancho }}<br>
+            {% for error in form.ancho.errors %}
+            <span style="color: red;">{{ error }}</span>
+            {% endfor %}
+        </div>
+        <div>
+            {{ form.largo.label }}
+            {{ form.largo }}<br>
+            {% for error in form.largo.errors %}
+            <span style="color: red;">{{ error }}</span>
+            {% endfor %}
+        </div>
+        <div>
+            <p>Cantidad de luz</p>
+            <div>
+                {{ form.luz_baja.label }}
+                {{ form.luz_baja }}<br>
+                {% for error in form.luz_baja.errors %}
+                <span style="color: red;">{{ error }}</span>
+                {% endfor %}
+            </div>
+            <div>
+                {{ form.luz_moderada.label }}
+                {{ form.luz_moderada }}<br>
+                {% for error in form.luz_moderada.errors %}
+                <span style="color: red;">{{ error }}</span>
+                {% endfor %}
+            </div>
+            <div>
+                {{ form.luz_abundante.label }}
+                {{ form.luz_abundante }}<br>
+                {% for error in form.luz_abundante.errors %}
+                <span style="color: red;">{{ error }}</span>
+                {% endfor %}
+            </div>
+        </div>
+        <div>
+            <p>Intensidad de riego</p>
+            <div>
+                {{ form.riego_bajo.label }}
+                {{ form.riego_bajo }}<br>
+                {% for error in form.riego_bajo.errors %}
+                <span style="color: red;">{{ error }}</span>
+                {% endfor %}
+            </div>
+            <div>
+                {{ form.riego_moderado.label }}
+                {{ form.riego_moderado }}<br>
+                {% for error in form.riego_moderado.errors %}
+                <span style="color: red;">{{ error }}</span>
+                {% endfor %}
+            </div>
+            <div>
+                {{ form.riego_abundante.label }}
+                {{ form.riego_abundante }}<br>
+                {% for error in form.riego_abundante.errors %}
+                <span style="color: red;">{{ error }}</span>
+                {% endfor %}
+            </div>
+        </div>
+        <div>
+            <p>Tipo de material vegetal</p>
+            <div>
+                {{ form.arbol.label }}
+                {{ form.arbol }}<br>
+                {% for error in form.arbol.errors %}
+                <span style="color: red;">{{ error }}</span>
+                {% endfor %}
+            </div>
+            <div>
+                {{ form.arbusto.label }}
+                {{ form.arbusto }}<br>
+                {% for error in form.arbusto.errors %}
+                <span style="color: red;">{{ error }}</span>
+                {% endfor %}
+            </div>
+            <div>
+                {{ form.cubresuelo.label }}
+                {{ form.cubresuelo }}<br>
+                {% for error in form.cubresuelo.errors %}
+                <span style="color: red;">{{ error }}</span>
+                {% endfor %}
+            </div>
+            <div>
+                {{ form.enredadera.label }}
+                {{ form.enredadera }}<br>
+                {% for error in form.enredadera.errors %}
+                <span style="color: red;">{{ error }}</span>
+                {% endfor %}
+            </div>
+            <div>
+                {{ form.floral.label }}
+                {{ form.floral }}<br>
+                {% for error in form.floral.errors %}
+                <span style="color: red;">{{ error }}</span>
+                {% endfor %}
+            </div>
+            <div>
+                {{ form.frutal.label }}
+                {{ form.frutal }}<br>
+                {% for error in form.frutal.errors %}
+                <span style="color: red;">{{ error }}</span>
+                {% endfor %}
+            </div>
+        </div>
+        <div>
+            <p>Me gustaría atraer</p>
+            <div>
+                {{ form.abejas.label }}
+                {{ form.abejas }}<br>
+                {% for error in form.abejas.errors %}
+                <span style="color: red;">{{ error }}</span>
+                {% endfor %}
+            </div>
+            <div>
+                {{ form.mariposas.label }}
+                {{ form.mariposas }}<br>
+                {% for error in form.mariposas.errors %}
+                <span style="color: red;">{{ error }}</span>
+                {% endfor %}
+            </div>
+            <div>
+                {{ form.colibries.label }}
+                {{ form.colibries }}<br>
+                {% for error in form.colibries.errors %}
+                <span style="color: red;">{{ error }}</span>
+                {% endfor %}
+            </div>
+        </div>
+        <div>
+            <p>Resistencia al frio (Hardiness Zone)</p>
+            <p>Puedes revisarla en el siguiente link https://www.plantmaps.com/interactive-chile-plant-hardiness-zone-map.php</p>
+            <div>
+                {{ form.hardiness.label }}
+                {{ form.hardiness }}<br>
+                {% for error in form.hardiness.errors %}
+                <span style="color: red;">{{ error }}</span>
+                {% endfor %}
+            </div>
+        </div>
+        <div>
+            <br>
+            {{ form.submit() }}
+        </div>
+    </form>
+</div>
