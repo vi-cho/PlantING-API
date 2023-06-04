@@ -4,7 +4,7 @@ sys.path.insert(1, '/home/yosokosu-mint/Documents/proyecto_innova/backend/PlantI
 from preprocessing import preprocess_plants
 
 def basic_filter(data, db_filename):
-    db = pd.read_csv(f'{db_filename}_final.csv')
+    db = pd.read_csv(f'src/bdd/{db_filename}')
     db['Tipo de material vegetal'] = db['Tipo de material vegetal'].apply(lambda x: x.split(','))
     db = db[
         (db['Agua requerida'] <= data['Agua disponible']) &
