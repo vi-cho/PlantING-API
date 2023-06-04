@@ -57,17 +57,15 @@ def preprocess_plants(plants):
         'Zona 11A': 21,
     }
     plants['zone'] = plants['zone'].replace(mapeo)
-    plants['type'] = plants['type'].apply(lambda x: x.split(','))
+    # plants['type'] = plants['type'].apply(lambda x: x.split(','))
 
-    label_features = ['climate', 'color', 'bees', 'butterfly', 'birds', 'aroma', 'care_intensity']
+    label_features = ['color', 'bees', 'butterfly', 'birds', 'aroma', 'care_intensity']
     label_encoder = LabelEncoder()
-    label_encoder.fit(['Árbol','Arbusto','Cubresuelo','Enredadera','Floral','Frutal'])
-    plants['type'] = [[label_encoder.transform([sublist]) for sublist in arr] for arr in plants['type']]
-
-    label_encoder = LabelEncoder()
+    plants['type'] = [[label_encoder.fit_transform([sublist]) for sublist in arr] for arr in plants['type']]
+    plants['climate'] = label_encoder.fit_transform(plants['climate'])
+    
     for feature in label_features:
-        plants[feature] = label_encoder.fit_transform(plants[feature])
-
+        plants[feature] = plants[feature].apply(lambda x: ['Poco', 'Medio', 'Mucho'].index(x))
     return plants
 
 if __name__ == '__main__':
