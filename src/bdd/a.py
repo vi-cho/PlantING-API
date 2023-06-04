@@ -24,7 +24,7 @@ mapeo = {
     'Zona 11A': 21,
 }
 
-df = pd.read_csv('plantas.csv')
+df = pd.read_csv('src/bdd/plantas.csv')
 df['Hardiness Zone'] = df['Hardiness Zone'].replace(mapeo)
 print(df['Hardiness Zone'])
 print(df)

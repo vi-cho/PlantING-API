@@ -12,9 +12,13 @@ def distribuir(db, nombre, ancho, largo):
         plantas2 = db_segundo_nivel["Nombre en español"].values.tolist()
         plantas3 = db_tercer_nivel["Nombre en español"].values.tolist()
         
-        n_bloquecen = int(int(ancho)*int(largo)*0.7/4)
-        n_ind_bloquecen = n_bloquecen // len(plantas1)
-        n_bloquecen = n_ind_bloquecen * len(plantas1)
+        if len(plantas1) > 0:
+            n_bloquecen = int(int(ancho)*int(largo)*0.7/4)
+            n_ind_bloquecen = n_bloquecen // len(plantas1)
+            n_bloquecen = n_ind_bloquecen * len(plantas1)
+        else:
+            n_bloquecen = 0
+            n_ind_bloquecen = 0
         
         db_plantas11 = db_primer_nivel.sample(frac = 1/3)
         resto1 = db_primer_nivel.drop(db_plantas11.index)
@@ -41,41 +45,77 @@ def distribuir(db, nombre, ancho, largo):
         plantas32 = db_plantas32["Nombre en español"].values.tolist()
         plantas33 = db_plantas33["Nombre en español"].values.tolist()
 
-        n_plantas11 = int(ancho)*2
-        n_ind_plantas11 = n_plantas11 // len(plantas11)
-        n_plantas11 = n_ind_plantas11 * len(plantas11)
+        if len(plantas11) > 0:
+            n_plantas11 = int(ancho)*2
+            n_ind_plantas11 = n_plantas11 // len(plantas11)
+            n_plantas11 = n_ind_plantas11 * len(plantas11)
+        else:
+            n_plantas11 = 0
+            n_ind_plantas11 = 0
 
-        n_plantas21 = int(int(ancho)/1.5)
-        n_ind_plantas21 = n_plantas21 // len(plantas21)
-        n_plantas21 = n_ind_plantas21 * len(plantas21)
+        if len(plantas21) > 0:
+            n_plantas21 = int(int(ancho)/1.5)
+            n_ind_plantas21 = n_plantas21 // len(plantas21)
+            n_plantas21 = n_ind_plantas21 * len(plantas21)
+        else:
+            n_plantas21 = 0
+            n_ind_plantas21 = 0
 
-        n_plantas31 = int(int(ancho)/2.5)
-        n_ind_plantas31 = n_plantas31 // len(plantas31)
-        n_plantas31 = n_ind_plantas31 * len(plantas31)
+        if len(plantas31) > 0:
+            n_plantas31 = int(int(ancho)/2.5)
+            n_ind_plantas31 = n_plantas31 // len(plantas31)
+            n_plantas31 = n_ind_plantas31 * len(plantas31)
+        else:
+            n_plantas31 = 0
+            n_ind_plantas31 = 0
 
-        n_plantas12 = int(largo)*2*0.8
-        n_ind_plantas12 = n_plantas12 // len(plantas12)
-        n_plantas12 = n_ind_plantas12 * len(plantas12)
+        if len(plantas12) > 0:
+            n_plantas12 = int(largo)*2*0.8
+            n_ind_plantas12 = n_plantas12 // len(plantas12)
+            n_plantas12 = n_ind_plantas12 * len(plantas12)
+        else:
+            n_plantas12 = 0
+            n_ind_plantas12 = 0
 
-        n_plantas22 = int(int(largo)*0.8/1.5)
-        n_ind_plantas22 = n_plantas22 // len(plantas22)
-        n_plantas22 = n_ind_plantas22 * len(plantas22)
+        if len(plantas22) > 0:
+            n_plantas22 = int(int(largo)*0.8/1.5)
+            n_ind_plantas22 = n_plantas22 // len(plantas22)
+            n_plantas22 = n_ind_plantas22 * len(plantas22)
+        else:
+            n_plantas22 = 0
+            n_ind_plantas22 = 0
 
-        n_plantas32 = int(int(largo)*0.8/2.5)
-        n_ind_plantas32 = n_plantas32 // len(plantas32)
-        n_plantas32 = n_ind_plantas32 * len(plantas32)
+        if len(plantas32) > 0:
+            n_plantas32 = int(int(largo)*0.8/2.5)
+            n_ind_plantas32 = n_plantas32 // len(plantas32)
+            n_plantas32 = n_ind_plantas32 * len(plantas32)
+        else:
+            n_plantas32 = 0
+            n_ind_plantas32 = 0
 
-        n_plantas13 = int(largo)*2*0.8
-        n_ind_plantas13 = n_plantas13 // len(plantas13)
-        n_plantas13 = n_ind_plantas13 * len(plantas13)
+        if len(plantas13) > 0:
+            n_plantas13 = int(largo)*2*0.8
+            n_ind_plantas13 = n_plantas13 // len(plantas13)
+            n_plantas13 = n_ind_plantas13 * len(plantas13)
+        else:
+            n_plantas13 = 0
+            n_ind_plantas13 = 0
 
-        n_plantas23 = int(int(largo)*0.8/1.5)
-        n_ind_plantas23 = n_plantas23 // len(plantas23)
-        n_plantas23 = n_ind_plantas23 * len(plantas23)
+        if len(plantas23) > 0:
+            n_plantas23 = int(int(largo)*0.8/1.5)
+            n_ind_plantas23 = n_plantas23 // len(plantas23)
+            n_plantas23 = n_ind_plantas23 * len(plantas23)
+        else:
+            n_plantas23 = 0
+            n_ind_plantas23 = 0
 
-        n_plantas33 = int(int(largo)*0.8/2.5)
-        n_ind_plantas33 = n_plantas33 // len(plantas33)
-        n_plantas33 = n_ind_plantas33 * len(plantas33)
+        if len(plantas33) > 0:
+            n_plantas33 = int(int(largo)*0.8/2.5)
+            n_ind_plantas33 = n_plantas33 // len(plantas33)
+            n_plantas33 = n_ind_plantas33 * len(plantas33)
+        else:
+            n_plantas33 = 0
+            n_ind_plantas33 = 0
 
         return render_template("distribution.html", largo_db=len(db.index), nombre=nombre, ancho=ancho, largo=largo,
                                plantas1=plantas1, plantas2=plantas2, plantas3=plantas3, n_bloquecen=n_bloquecen,
