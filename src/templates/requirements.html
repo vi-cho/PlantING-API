@@ -4,20 +4,21 @@
     <form action="" method="post" novalidate>
         {{ form.hidden_tag() }}
         <div>
-            {{ form.comuna.label }}
+            <p><b>{{ form.comuna.label }}</b></p>
             {{ form.comuna }}<br>
             {% for error in form.comuna.errors %}
             <span style="color: red;">{{ error }}</span>
             {% endfor %}
         </div>
+        <br>
         <div>
-            {{ form.accion.label }}
+            <p><b>{{ form.accion.label }}</b></p>
             {{ form.accion }}<br>
             {% for error in form.accion.errors %}
             <span style="color: red;">{{ error }}</span>
             {% endfor %}
         </div>
-        <div><p>Ingresa las dimensiones del jardín/espacio que quieres diseñar</p></div>
+        <div><p><b>Ingresa las dimensiones del jardín/espacio que quieres diseñar</b></p></div>
         <div>
             {{ form.ancho.label }}
             {{ form.ancho }}<br>
@@ -32,8 +33,10 @@
             <span style="color: red;">{{ error }}</span>
             {% endfor %}
         </div>
+        <br>
         <div>
-            <p>Cantidad de luz</p>
+            <p><b>Cantidad de luz</b></p>
+            <p>Puede seleccionar más de una opción</p>
             <div>
                 {{ form.luz_baja.label }}
                 {{ form.luz_baja }}<br>
@@ -56,8 +59,10 @@
                 {% endfor %}
             </div>
         </div>
+        <br>
         <div>
-            <p>Intensidad de riego</p>
+            <p><b>Intensidad de riego</b></p>
+            <p>Puede seleccionar más de una opción</p>
             <div>
                 {{ form.riego_bajo.label }}
                 {{ form.riego_bajo }}<br>
@@ -80,8 +85,10 @@
                 {% endfor %}
             </div>
         </div>
+        <br>
         <div>
-            <p>Tipo de material vegetal</p>
+            <p><b>Tipo de material vegetal</b></p>
+            <p>Puede seleccionar más de una opción</p>
             <div>
                 {{ form.arbol.label }}
                 {{ form.arbol }}<br>
@@ -125,8 +132,10 @@
                 {% endfor %}
             </div>
         </div>
+        <br>
         <div>
-            <p>Me gustaría atraer</p>
+            <p><b>Me gustaría atraer</b></p>
+            <p>Puede seleccionar más de una opción</p>
             <div>
                 {{ form.abejas.label }}
                 {{ form.abejas }}<br>
@@ -149,8 +158,9 @@
                 {% endfor %}
             </div>
         </div>
+        <br>
         <div>
-            <p>Resistencia al frio (Hardiness Zone)</p>
+            <p><b>Resistencia al frio (Hardiness Zone)</b></p>
             <p>Puedes revisarla en este <a href="https://www.plantmaps.com/interactive-chile-plant-hardiness-zone-map.php" target="_blank">link</a></p>
             <div>
                 {{ form.hardiness.label }}

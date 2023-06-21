@@ -74,11 +74,13 @@
     <tr>
         <th>Planta</th>
         <th>Cantidad</th>
+        <th>Acción</th>
     </tr>
     {% for planta in plantas1 %}
         <tr>
             <td>{{ planta }}</td>
             <td>{{ n_ind_plantas1 }}</td>
+            <td><a href="{{ url_for('plant_info', nombre=planta) }}">Ver</a></td>
         </tr>
     {% endfor %}
 </table>
@@ -88,11 +90,13 @@
     <tr>
         <th>Planta</th>
         <th>Cantidad</th>
+        <th>Acción</th>
     </tr>
     {% for planta in plantas2 %}
         <tr>
             <td>{{ planta }}</td>
             <td>{{ n_ind_plantas2 }}</td>
+            <td><a href="{{ url_for('plant_info', nombre=planta) }}">Ver</a></td>
         </tr>
     {% endfor %}
 </table>
@@ -102,11 +106,13 @@
     <tr>
         <th>Planta</th>
         <th>Cantidad</th>
+        <th>Acción</th>
     </tr>
     {% for planta in plantas3 %}
         <tr>
             <td>{{ planta }}</td>
             <td>{{ n_ind_plantas3 }}</td>
+            <td><a href="{{ url_for('plant_info', nombre=planta) }}">Ver</a></td>
         </tr>
     {% endfor %}
 </table>
@@ -185,11 +191,13 @@
     <tr>
         <th>Planta</th>
         <th>Cantidad</th>
+        <th>Acción</th>
     </tr>
     {% for planta in plantas1 %}
         <tr>
             <td>{{ planta }}</td>
             <td>{{ n_ind_plantas1_cen }}</td>
+            <td><a href="{{ url_for('plant_info', nombre=planta) }}">Ver</a></td>
         </tr>
     {% endfor %}
 </table>
@@ -199,11 +207,13 @@
     <tr>
         <th>Planta</th>
         <th>Cantidad</th>
+        <th>Acción</th>
     </tr>
     {% for planta in plantas2 %}
         <tr>
             <td>{{ planta }}</td>
             <td>{{ n_ind_plantas2_cen }}</td>
+            <td><a href="{{ url_for('plant_info', nombre=planta) }}">Ver</a></td>
         </tr>
     {% endfor %}
 </table>

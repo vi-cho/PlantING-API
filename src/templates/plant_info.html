@@ -1,0 +1,41 @@
+<h1>{{ nombre }}</h1>
+
+<p><b>Nombre científico: </b>{{ latin }}</p>
+
+<p><b>Nativo de: </b>{{ nativo }}</p>
+
+<p><b>Tipo de material vegetal: </b>{{ material }}</p>
+
+<p><b>Follaje: </b>{{ follaje }}</p>
+
+<p><b>Agua requerida: </b>{{ agua }}</p>
+
+{% if luz == "Poca" %}
+    <p><b>Prefiere: </b>Sombra o semisombra</p>
+{% elif luz == "Media" %}
+    <p><b>Prefiere: </b>Sol o semisombra</p>
+{% else %}
+    <p><b>Prefiere: </b>Sol o pleno sol</p>
+{% endif %}
+
+<p><b>Radio máximo (en metros): </b>{{ radio }}</p>
+
+<p><b>Altura máxima (en metros): </b>{{ altura }}</p>
+
+<p><b>Zonas de resistencia al frío (Hardiness Zones): </b>{{ hardiness }} - Zona 11A</p>
+
+<p><b>Época óptima para plantar: </b>{{ siembra }}</p>
+
+{% if floracion != "No aplica" %}
+    <p><b>Época de floración: </b>{{ floracion }}</p>
+{% else %}
+    <p><b>Época de floración: </b>No presenta floración</p>
+{% endif %}
+
+{% if poda != "No aplica" %}
+    <p><b>Época recomendada para podar: </b>{{ poda }}</p>
+{% else %}
+    <p><b>Época recomendada para podar: </b>Planta no requiere podas</p>
+{% endif %}
+
+<p><b>Descripción: </b>{{ descripcion }}</p>

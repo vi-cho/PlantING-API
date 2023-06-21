@@ -135,3 +135,27 @@ def distribute():
         db_luces = pd.concat([db_luces, db_luz], ignore_index=True).drop_duplicates()
     db_primaria = pd.merge(db_tipos, db_luces, how='inner')
     return distribuir(db_primaria, nombre, int(ancho), int(largo), accion, db)
+
+@app.route('/plant_info')
+def plant_info():
+    nombre = request.args.get('nombre', None)
+    db = pd.read_csv("src/bdd/100plantas.csv")
+    db_planta = db[(db["Nombre en español"] == nombre)]
+    indices = list(db_planta.index.values)
+    ind = int(indices[0])
+    latin = db_planta["Nombre científico"][ind]
+    nativo = db_planta["Nativo de"][ind]
+    material = db_planta["Tipo de material vegetal"][ind]
+    follaje = db_planta["Caduco / Perenne"][ind]
+    luz = db_planta["Cantidad de luz"][ind]
+    agua = db_planta["Agua requerida"][ind]
+    radio = db_planta["Radio máximo (en metros)"][ind]
+    altura = db_planta["Altura máxima (en metros)"][ind]
+    hardiness = db_planta["Hardiness Zone"][ind]
+    siembra = db_planta["Para cada evento eliga la época correspondiente [Siembra]"][ind]
+    floracion = db_planta["Para cada evento eliga la época correspondiente [Floración]"][ind]
+    poda = db_planta["Para cada evento eliga la época correspondiente [Poda]"][ind]
+    descripcion = db_planta["Descripción"][ind]
+    return render_template("plant_info.html", nombre=nombre, latin=latin, nativo=nativo, material=material,
+                           follaje=follaje, luz=luz, agua=agua, radio=radio, altura=altura, poda=poda,
+                           hardiness=hardiness, siembra=siembra, floracion=floracion, descripcion=descripcion)
