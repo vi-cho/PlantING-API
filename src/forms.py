@@ -11,6 +11,7 @@ def lista_comunas():
     for linea in lineas:
         lista_ind = linea.strip().split(";")
         comunas.append(lista_ind[1])
+    comunas.sort()
     return comunas
 
 def hardiness_zones():
@@ -21,8 +22,9 @@ def hardiness_zones():
 
 class RequirementsForm(FlaskForm):
     comuna = SelectField('Comuna', choices=lista_comunas())
-    ancho = IntegerField('Ancho del jardin')
-    largo = IntegerField('Largo del jardin')
+    accion = RadioField('¿Deseas diseñar tu jardín entero o solo una parte?', choices = [('Todo','Diseñar jardín entero'),('Parte','Diseñar solo una parte')])
+    ancho = IntegerField('Ancho (en metros)')
+    largo = IntegerField('Largo (en metros)')
     luz_baja = BooleanField('Baja')
     luz_moderada = BooleanField('Moderada')
     luz_abundante = BooleanField('Abundante')

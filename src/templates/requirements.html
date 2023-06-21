@@ -11,6 +11,14 @@
             {% endfor %}
         </div>
         <div>
+            {{ form.accion.label }}
+            {{ form.accion }}<br>
+            {% for error in form.accion.errors %}
+            <span style="color: red;">{{ error }}</span>
+            {% endfor %}
+        </div>
+        <div><p>Ingresa las dimensiones del jardín/espacio que quieres diseñar</p></div>
+        <div>
             {{ form.ancho.label }}
             {{ form.ancho }}<br>
             {% for error in form.ancho.errors %}
@@ -143,7 +151,7 @@
         </div>
         <div>
             <p>Resistencia al frio (Hardiness Zone)</p>
-            <p>Puedes revisarla en el siguiente link https://www.plantmaps.com/interactive-chile-plant-hardiness-zone-map.php</p>
+            <p>Puedes revisarla en este <a href="https://www.plantmaps.com/interactive-chile-plant-hardiness-zone-map.php" target="_blank">link</a></p>
             <div>
                 {{ form.hardiness.label }}
                 {{ form.hardiness }}<br>

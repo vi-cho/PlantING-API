@@ -68,7 +68,3 @@ def preprocess_plants(plants):
         plants[feature] = plants[feature].apply(lambda x: ['Poco', 'Medio', 'Mucho'].index(x))
     return plants
 
-if __name__ == '__main__':
-    a = pd.read_csv('src/bdd/plantas.csv')
-    plants = preprocess_plants(a)
-    print(plants)

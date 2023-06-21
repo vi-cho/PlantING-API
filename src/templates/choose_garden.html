@@ -1,13 +1,29 @@
-<h2>Jardines diseñados</h2>
+{% if accion == "Todo" %}
+    <h2>Jardines diseñados</h2>
 
-<p>Hemos diseñado 7 jardines para ti, en base a tus especificaciones.</p>
-<p>¡Chequéalos y revisa cuál es el que más te gusta!</p>
+    <p>Hemos diseñado 7 jardines para ti, en base a tus especificaciones.</p>
+    <p>¡Chequéalos y revisa cuál es el que más te gusta!</p>
 
-<br>
-<p>"Jardin de menor consumo hídrico" <a href="{{ url_for('distribute', agua=agua, luz=luz, material=material, hardiness=hardiness, nombre='Jardín de menor consumo hídrico', ancho=ancho, largo=largo) }}">Ver</a></p>
-<p>"Jardin más colorido" <a href="{{ url_for('distribute', agua=agua, luz=luz, material=material, hardiness=hardiness, nombre='Jardín mas colorido', ancho=ancho, largo=largo) }}">Ver</a></p>
-<p>"Jardin más atractivo para polinizadores" <a href="{{ url_for('distribute', agua=agua, luz=luz, material=material, hardiness=hardiness, nombre='Jardín mas atractivo para polinizadores', ancho=ancho, largo=largo) }}">Ver</a></p>
-<p>"Jardin para colibríes y otras aves" <a href="{{ url_for('distribute', agua=agua, luz=luz, material=material, hardiness=hardiness, nombre='Jardín para colibries y otras aves', ancho=ancho, largo=largo) }}">Ver</a></p>
-<p>"Jardin de aromas" <a href="{{ url_for('distribute', agua=agua, luz=luz, material=material, hardiness=hardiness, nombre='Jardín de aromas', ancho=ancho, largo=largo) }}">Ver</a></p>
-<p>"Jardin más fácil de mantener" <a href="{{ url_for('distribute', agua=agua, luz=luz, material=material, hardiness=hardiness, nombre='Jardín mas facil de mantener', ancho=ancho, largo=largo) }}">Ver</a></p>
-<p>"Jardin bello en todas las épocas" <a href="{{ url_for('distribute', agua=agua, luz=luz, material=material, hardiness=hardiness, nombre='Jardín bello en todas las epocas', ancho=ancho, largo=largo) }}">Ver</a></p>
+    <br>
+    <p>"Jardin de menor consumo hídrico" <a href="{{ url_for('distribute', agua=agua, luz=luz, material=material, hardiness=hardiness, accion=accion, nombre='Jardín de menor consumo hídrico', ancho=ancho, largo=largo) }}">Ver</a></p>
+    <p>"Jardin más colorido" <a href="{{ url_for('distribute', agua=agua, luz=luz, material=material, hardiness=hardiness, accion=accion, nombre='Jardín mas colorido', ancho=ancho, largo=largo) }}">Ver</a></p>
+    <p>"Jardin más atractivo para polinizadores" <a href="{{ url_for('distribute', agua=agua, luz=luz, material=material, hardiness=hardiness, accion=accion, nombre='Jardín mas atractivo para polinizadores', ancho=ancho, largo=largo) }}">Ver</a></p>
+    <p>"Jardin para colibríes y otras aves" <a href="{{ url_for('distribute', agua=agua, luz=luz, material=material, hardiness=hardiness, accion=accion, nombre='Jardín para colibries y otras aves', ancho=ancho, largo=largo) }}">Ver</a></p>
+    <p>"Jardin de aromas" <a href="{{ url_for('distribute', agua=agua, luz=luz, material=material, hardiness=hardiness, accion=accion, nombre='Jardín de aromas', ancho=ancho, largo=largo) }}">Ver</a></p>
+    <p>"Jardin más fácil de mantener" <a href="{{ url_for('distribute', agua=agua, luz=luz, material=material, hardiness=hardiness, accion=accion, nombre='Jardín mas facil de mantener', ancho=ancho, largo=largo) }}">Ver</a></p>
+    <p>"Jardin bello en todas las épocas" <a href="{{ url_for('distribute', agua=agua, luz=luz, material=material, hardiness=hardiness, accion=accion, nombre='Jardín bello en todas las epocas', ancho=ancho, largo=largo) }}">Ver</a></p>
+{% else %}
+    <h2>Espacios diseñados</h2>
+
+    <p>Hemos diseñado 7 espacios para ti, en base a tus especificaciones.</p>
+    <p>¡Chequéalos y revisa cuál es el que más te gusta!</p>
+
+    <br>
+    <p>"Espacio de menor consumo hídrico" <a href="{{ url_for('distribute', agua=agua, luz=luz, material=material, hardiness=hardiness, accion=accion, nombre='Jardín de menor consumo hídrico', ancho=ancho, largo=largo) }}">Ver</a></p>
+    <p>"Espacio más colorido" <a href="{{ url_for('distribute', agua=agua, luz=luz, material=material, hardiness=hardiness, accion=accion, nombre='Jardín mas colorido', ancho=ancho, largo=largo) }}">Ver</a></p>
+    <p>"Espacio más atractivo para polinizadores" <a href="{{ url_for('distribute', agua=agua, luz=luz, material=material, hardiness=hardiness, accion=accion, nombre='Jardín mas atractivo para polinizadores', ancho=ancho, largo=largo) }}">Ver</a></p>
+    <p>"Espacio para colibríes y otras aves" <a href="{{ url_for('distribute', agua=agua, luz=luz, material=material, hardiness=hardiness, accion=accion, nombre='Jardín para colibries y otras aves', ancho=ancho, largo=largo) }}">Ver</a></p>
+    <p>"Espacio de aromas" <a href="{{ url_for('distribute', agua=agua, luz=luz, material=material, hardiness=hardiness, accion=accion, nombre='Jardín de aromas', ancho=ancho, largo=largo) }}">Ver</a></p>
+    <p>"Espacio más fácil de mantener" <a href="{{ url_for('distribute', agua=agua, luz=luz, material=material, hardiness=hardiness, accion=accion, nombre='Jardín mas facil de mantener', ancho=ancho, largo=largo) }}">Ver</a></p>
+    <p>"Espacio bello en todas las épocas" <a href="{{ url_for('distribute', agua=agua, luz=luz, material=material, hardiness=hardiness, accion=accion, nombre='Jardín bello en todas las epocas', ancho=ancho, largo=largo) }}">Ver</a></p>
+{% endif %}

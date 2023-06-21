@@ -1,10 +1,10 @@
 import pandas as pd
 import sys
 sys.path.insert(1, '/home/yosokosu-mint/Documents/proyecto_innova/backend/PlantING-API/src/models')
-from preprocessing import preprocess_plants
+from models.preprocessing import preprocess_plants
 
 def basic_filter(data, db_filename):
-    db = pd.read_csv(f'{db_filename}_final.csv')
+    db = pd.read_csv(db_filename)
     db['Tipo de material vegetal'] = db['Tipo de material vegetal'].apply(lambda x: x.split(','))
     db = db[
         (db['Agua requerida'] <= data['Agua disponible']) &
@@ -67,43 +67,4 @@ def care_priority(data, db_filename):
     worst = db[db_new['care_intensity'] == 2]
     res = pd.concat([best,mid,worst])
     return res
-
-if __name__ == '__main__':
-    a = pd.read_csv(f'src/bdd/plantas.csv')
-    print(water_priority({
-        'Agua disponible': 1,
-        'Cantidad de luz': 1,
-        'Material vegetal': ['Arbusto', 'Floral'],
-        'Hardiness Zone': 15,
-    },'src/bdd/plantas'))
-    print(color_priority({
-        'Agua disponible': 1,
-        'Cantidad de luz': 1,
-        'Material vegetal': ['Arbusto', 'Floral'],
-        'Hardiness Zone': 15,
-    },'src/bdd/plantas'))
-    print(bee_priority({
-            'Agua disponible': 1,
-            'Cantidad de luz': 1,
-            'Material vegetal': ['Arbusto', 'Floral'],
-            'Hardiness Zone': 15,
-        },'src/bdd/plantas'))
-    print(bird_priority({
-            'Agua disponible': 1,
-            'Cantidad de luz': 1,
-            'Material vegetal': ['Arbusto', 'Floral'],
-            'Hardiness Zone': 15,
-        },'src/bdd/plantas'))
-    print(aroma_priority({
-            'Agua disponible': 1,
-            'Cantidad de luz': 1,
-            'Material vegetal': ['Arbusto', 'Floral'],
-            'Hardiness Zone': 15,
-        },'src/bdd/plantas'))
-    print(care_priority({
-            'Agua disponible': 1,
-            'Cantidad de luz': 1,
-            'Material vegetal': ['Arbusto', 'Floral'],
-            'Hardiness Zone': 15,
-        },'src/bdd/plantas'))
 

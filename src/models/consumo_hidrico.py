@@ -21,23 +21,3 @@ def garden_water_compsumption(features, targets, user_data):
     return model.predict(user_data)
 
 
-if __name__ == '__main__':
-    plants = pd.read_csv('src/bdd/plantas.csv')
-    
-    plants = preprocess_plants(plants)
-    plants = plants.drop('type', axis=1)
-    print(plants)
-    targets_data = {
-        'water_consumption': [random.randint(1, 5) for _ in range(15)],
-        'colorfulness': [random.randint(1, 5) for _ in range(15)],
-        'pollinator_attraction': [random.choice([True, False]) for _ in range(15)],
-        'bird_attraction': [random.choice([True, False]) for _ in range(15)],
-        'aroma': [random.choice([True, False]) for _ in range(15)],
-        'care_intensity': [random.randint(1, 5) for _ in range(15)],
-        'year_round_floral': [random.choice([True, False]) for _ in range(15)]
-    }
-    targets = pd.DataFrame(targets_data)
-    user_data = {
-    }
-    wc_pred = garden_water_compsumption(plants, targets, user_data)
-    print(wc_pred)
