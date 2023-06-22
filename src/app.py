@@ -12,7 +12,7 @@ app.config['SECRET_KEY'] = '7110c8ae51a4b5af97be6534caef90e4bb9bdcb3380af008f90b
 @app.route('/')
 def hello_world():
     texto = '<p>Bienvenido a PlantING!</p>\n<a href="/comenzar">Comenzar</a>'
-    return texto
+    return render_template("start.html")
 
 @app.route('/comenzar', methods=["GET", "POST"])
 def requirements_form():
