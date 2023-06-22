@@ -37,7 +37,7 @@ def requirements_form():
         abejas = form.abejas.data
         mariposas = form.mariposas.data
         colibries = form.colibries.data
-        hardiness = form.hardiness.data
+        hardiness = 'Zona 10A'
         if riego_abundante:
             agua = 2
         elif riego_moderado:

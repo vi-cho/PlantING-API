@@ -40,5 +40,4 @@ class RequirementsForm(FlaskForm):
     abejas = BooleanField('Abejas')
     mariposas = BooleanField('Mariposas')
     colibries = BooleanField('Colibríes (y otras aves)')
-    hardiness = RadioField('Zona de resistencia al frio (Hardiness Zone)', choices=hardiness_zones())
     submit = SubmitField('Diseñar jardines')

@@ -1,178 +1,253 @@
-<h1>Filtros</h1>
-
-<div>
-    <form action="" method="post" novalidate>
-        {{ form.hidden_tag() }}
-        <div>
-            <p><b>{{ form.comuna.label }}</b></p>
-            {{ form.comuna }}<br>
-            {% for error in form.comuna.errors %}
-            <span style="color: red;">{{ error }}</span>
-            {% endfor %}
-        </div>
-        <br>
-        <div>
-            <p><b>{{ form.accion.label }}</b></p>
-            {{ form.accion }}<br>
-            {% for error in form.accion.errors %}
-            <span style="color: red;">{{ error }}</span>
-            {% endfor %}
-        </div>
-        <div><p><b>Ingresa las dimensiones del jardín/espacio que quieres diseñar</b></p></div>
-        <div>
-            {{ form.ancho.label }}
-            {{ form.ancho }}<br>
-            {% for error in form.ancho.errors %}
-            <span style="color: red;">{{ error }}</span>
-            {% endfor %}
-        </div>
-        <div>
-            {{ form.largo.label }}
-            {{ form.largo }}<br>
-            {% for error in form.largo.errors %}
-            <span style="color: red;">{{ error }}</span>
-            {% endfor %}
-        </div>
-        <br>
-        <div>
-            <p><b>Cantidad de luz</b></p>
-            <p>Puede seleccionar más de una opción</p>
-            <div>
-                {{ form.luz_baja.label }}
-                {{ form.luz_baja }}<br>
-                {% for error in form.luz_baja.errors %}
-                <span style="color: red;">{{ error }}</span>
-                {% endfor %}
-            </div>
-            <div>
-                {{ form.luz_moderada.label }}
-                {{ form.luz_moderada }}<br>
-                {% for error in form.luz_moderada.errors %}
-                <span style="color: red;">{{ error }}</span>
-                {% endfor %}
-            </div>
-            <div>
-                {{ form.luz_abundante.label }}
-                {{ form.luz_abundante }}<br>
-                {% for error in form.luz_abundante.errors %}
-                <span style="color: red;">{{ error }}</span>
-                {% endfor %}
-            </div>
-        </div>
-        <br>
-        <div>
-            <p><b>Intensidad de riego</b></p>
-            <p>Puede seleccionar más de una opción</p>
-            <div>
-                {{ form.riego_bajo.label }}
-                {{ form.riego_bajo }}<br>
-                {% for error in form.riego_bajo.errors %}
-                <span style="color: red;">{{ error }}</span>
-                {% endfor %}
-            </div>
-            <div>
-                {{ form.riego_moderado.label }}
-                {{ form.riego_moderado }}<br>
-                {% for error in form.riego_moderado.errors %}
-                <span style="color: red;">{{ error }}</span>
-                {% endfor %}
-            </div>
-            <div>
-                {{ form.riego_abundante.label }}
-                {{ form.riego_abundante }}<br>
-                {% for error in form.riego_abundante.errors %}
-                <span style="color: red;">{{ error }}</span>
-                {% endfor %}
-            </div>
-        </div>
-        <br>
-        <div>
-            <p><b>Tipo de material vegetal</b></p>
-            <p>Puede seleccionar más de una opción</p>
-            <div>
-                {{ form.arbol.label }}
-                {{ form.arbol }}<br>
-                {% for error in form.arbol.errors %}
-                <span style="color: red;">{{ error }}</span>
-                {% endfor %}
-            </div>
-            <div>
-                {{ form.arbusto.label }}
-                {{ form.arbusto }}<br>
-                {% for error in form.arbusto.errors %}
-                <span style="color: red;">{{ error }}</span>
-                {% endfor %}
-            </div>
-            <div>
-                {{ form.cubresuelo.label }}
-                {{ form.cubresuelo }}<br>
-                {% for error in form.cubresuelo.errors %}
-                <span style="color: red;">{{ error }}</span>
-                {% endfor %}
-            </div>
-            <div>
-                {{ form.enredadera.label }}
-                {{ form.enredadera }}<br>
-                {% for error in form.enredadera.errors %}
-                <span style="color: red;">{{ error }}</span>
-                {% endfor %}
-            </div>
-            <div>
-                {{ form.floral.label }}
-                {{ form.floral }}<br>
-                {% for error in form.floral.errors %}
-                <span style="color: red;">{{ error }}</span>
-                {% endfor %}
-            </div>
-            <div>
-                {{ form.frutal.label }}
-                {{ form.frutal }}<br>
-                {% for error in form.frutal.errors %}
-                <span style="color: red;">{{ error }}</span>
-                {% endfor %}
-            </div>
-        </div>
-        <br>
-        <div>
-            <p><b>Me gustaría atraer</b></p>
-            <p>Puede seleccionar más de una opción</p>
-            <div>
-                {{ form.abejas.label }}
-                {{ form.abejas }}<br>
-                {% for error in form.abejas.errors %}
-                <span style="color: red;">{{ error }}</span>
-                {% endfor %}
-            </div>
-            <div>
-                {{ form.mariposas.label }}
-                {{ form.mariposas }}<br>
-                {% for error in form.mariposas.errors %}
-                <span style="color: red;">{{ error }}</span>
-                {% endfor %}
-            </div>
-            <div>
-                {{ form.colibries.label }}
-                {{ form.colibries }}<br>
-                {% for error in form.colibries.errors %}
-                <span style="color: red;">{{ error }}</span>
-                {% endfor %}
-            </div>
-        </div>
-        <br>
-        <div>
-            <p><b>Resistencia al frio (Hardiness Zone)</b></p>
-            <p>Puedes revisarla en este <a href="https://www.plantmaps.com/interactive-chile-plant-hardiness-zone-map.php" target="_blank">link</a></p>
-            <div>
-                {{ form.hardiness.label }}
-                {{ form.hardiness }}<br>
-                {% for error in form.hardiness.errors %}
-                <span style="color: red;">{{ error }}</span>
-                {% endfor %}
-            </div>
-        </div>
-        <div>
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+  </head>
+  <body>
+    <section class="section has-background-success-light">
+        <div class="content">
+            <h1 class="is-size-3 is-title has-text-centered">Cuéntanos un poco de tu jardín...</h1>
             <br>
-            {{ form.submit() }}
+            <p class="has-text-centered">Así podremos generar posibles diseños con una selección de plantas que se adecúe a tus preferencias.</p>
         </div>
-    </form>
-</div>
+    </section>
+
+    <section class="section has-background-success-light">
+        <div class="container">
+            <div class="columns">
+                <div class="column is-2 has-background-success-light">
+                </div>
+                <div class="column is-8 has-background-white">
+                    <form action="" method="post" novalidate>
+                        {{ form.hidden_tag() }}
+                        <div class="columns">
+                            <div class="column">
+                                <p class="is-size-5">1. Selecciona tu comuna</p>
+                                <br>
+                                <div class="select">{{ form.comuna }}</div>
+                                <br>
+                                {% for error in form.comuna.errors %}
+                                <span style="color: red;">{{ error }}</span>
+                                {% endfor %}
+                            </div>
+                        </div>
+                        <br>
+                        <div class="columns">
+                            <div class="column">
+                                <p class="is-size-5">2. {{ form.accion.label }}</p>
+                                <br>
+                                <p class="control">
+                                    <div class="columns">
+                                    {% for subfield in form.accion %}
+                                        <div class="column is-one-third">
+                                        {{ subfield(class_="radio") }}
+                                        {{ subfield.label.text }}
+                                        </div>
+                                    {% endfor %}
+                                    </div>
+                                </p>
+                                <br>
+                                {% for error in form.accion.errors %}
+                                <span style="color: red;">{{ error }}</span>
+                                {% endfor %}
+                            </div>
+                        </div>
+                        <div class="columns">
+                            <div class="column">
+                                <p class="is-size-5">3. Ingresa las dimensiones del jardín/espacio que quieres diseñar</p>
+                                <br>
+                                <div class="columns">
+                                    <div class="column is-one-quarter">
+                                        {{ form.ancho.label }}
+                                        <p class="control">
+                                            {{ form.ancho(class_="input") }}
+                                        </p>
+                                        <br>
+                                        {% for error in form.ancho.errors %}
+                                        <span style="color: red;">{{ error }}</span>
+                                        {% endfor %}
+                                    </div>
+                                    <div class="column is-one-quarter is-offset-1">
+                                        {{ form.largo.label }}
+                                        <p class="control">
+                                            {{ form.largo(class_="input") }}
+                                        </p>
+                                        <br>
+                                        {% for error in form.largo.errors %}
+                                        <span style="color: red;">{{ error }}</span>
+                                        {% endfor %}
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <br>
+                        <div class="columns">
+                            <div class="column">
+                                <p class="is-size-5">4. Cantidad de luz que recibe tu jardín/espacio <p class="is-size-7">(Puede seleccionar más de una opción)</p></p>
+                                <br>
+                                <div class="columns">
+                                    <div class="column is-one-fifth">
+                                        {{ form.luz_baja(class_="checkbox") }}
+                                        {{ form.luz_baja.label }}
+                                        <br>
+                                        {% for error in form.luz_baja.errors %}
+                                        <span style="color: red;">{{ error }}</span>
+                                        {% endfor %}
+                                    </div>
+                                    <div class="column is-one-quarter">
+                                        {{ form.luz_moderada(class_="checkbox") }}
+                                        {{ form.luz_moderada.label }}
+                                        <br>
+                                        {% for error in form.luz_moderada.errors %}
+                                        <span style="color: red;">{{ error }}</span>
+                                        {% endfor %}
+                                    </div>
+                                    <div class="column is-one-quarter">
+                                        {{ form.luz_abundante(class_="checkbox") }}
+                                        {{ form.luz_abundante.label }}
+                                        <br>
+                                        {% for error in form.luz_abundante.errors %}
+                                        <span style="color: red;">{{ error }}</span>
+                                        {% endfor %}
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <br>
+                        <div class="columns">
+                            <div class="column">
+                                <p class="is-size-5">5. Intensidad de riego que buscas para tu jardín/espacio <p class="is-size-7">(Puede seleccionar más de una opción)</p></p>
+                                <br>
+                                <div class="columns">
+                                    <div class="column is-one-fifth">
+                                        {{ form.riego_bajo(class_="checkbox") }}
+                                        {{ form.riego_bajo.label }}
+                                        <br>
+                                        {% for error in form.riego_bajo.errors %}
+                                        <span style="color: red;">{{ error }}</span>
+                                        {% endfor %}
+                                    </div>
+                                    <div class="column is-one-quarter">
+                                        {{ form.riego_moderado(class_="checkbox") }}
+                                        {{ form.riego_moderado.label }}
+                                        <br>
+                                        {% for error in form.riego_moderado.errors %}
+                                        <span style="color: red;">{{ error }}</span>
+                                        {% endfor %}
+                                    </div>
+                                    <div class="column is-one-quarter">
+                                        {{ form.riego_abundante(class_="checkbox") }}
+                                        {{ form.riego_abundante.label }}
+                                        <br>
+                                        {% for error in form.riego_abundante.errors %}
+                                        <span style="color: red;">{{ error }}</span>
+                                        {% endfor %}
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <br>
+                        <div class="columns">
+                            <div class="column">
+                                <p class="is-size-5">6. Tipo de material vegetal que quieres para tu jardín/espacio <p class="is-size-7">(Puede seleccionar más de una opción)</p></p>
+                                <br>
+                                <div>
+                                    {{ form.arbol }}
+                                    {{ form.arbol.label }}
+                                    <br>
+                                    {% for error in form.arbol.errors %}
+                                    <span style="color: red;">{{ error }}</span>
+                                    {% endfor %}
+                                </div>
+                                <div>
+                                    {{ form.arbusto }}
+                                    {{ form.arbusto.label }}
+                                    <br>
+                                    {% for error in form.arbusto.errors %}
+                                    <span style="color: red;">{{ error }}</span>
+                                    {% endfor %}
+                                </div>
+                                <div>
+                                    {{ form.cubresuelo }}
+                                    {{ form.cubresuelo.label }}
+                                    <br>
+                                    {% for error in form.cubresuelo.errors %}
+                                    <span style="color: red;">{{ error }}</span>
+                                    {% endfor %}
+                                </div>
+                                <div>
+                                    {{ form.enredadera }}
+                                    {{ form.enredadera.label }}
+                                    <br>
+                                    {% for error in form.enredadera.errors %}
+                                    <span style="color: red;">{{ error }}</span>
+                                    {% endfor %}
+                                </div>
+                                <div>
+                                    {{ form.floral }}
+                                    {{ form.floral.label }}
+                                    <br>
+                                    {% for error in form.floral.errors %}
+                                    <span style="color: red;">{{ error }}</span>
+                                    {% endfor %}
+                                </div>
+                                <div>
+                                    {{ form.frutal }}
+                                    {{ form.frutal.label }}
+                                    <br>
+                                    {% for error in form.frutal.errors %}
+                                    <span style="color: red;">{{ error }}</span>
+                                    {% endfor %}
+                                </div>
+                            </div>
+                        </div>
+                        <br>
+                        <div class="columns">
+                            <div class="column">
+                                <p class="is-size-5">7. Me gustaría atraer a mi jardín/espacio <p class="is-size-7">(Puede seleccionar más de una opción. Si es indiferente, puede omitir esta categoría.)</p></p>
+                                <br>
+                                <div>
+                                    {{ form.abejas }}
+                                    {{ form.abejas.label }}
+                                    <br>
+                                    {% for error in form.abejas.errors %}
+                                    <span style="color: red;">{{ error }}</span>
+                                    {% endfor %}
+                                </div>
+                                <div>
+                                    {{ form.mariposas }}
+                                    {{ form.mariposas.label }}
+                                    <br>
+                                    {% for error in form.mariposas.errors %}
+                                    <span style="color: red;">{{ error }}</span>
+                                    {% endfor %}
+                                </div>
+                                <div>
+                                    {{ form.colibries }}
+                                    {{ form.colibries.label }}
+                                    <br>
+                                    {% for error in form.colibries.errors %}
+                                    <span style="color: red;">{{ error }}</span>
+                                    {% endfor %}
+                                </div>
+                            </div>
+                        </div>
+                        <div>
+                            <br>
+                            <br>
+                            <br>
+                            <p class="control has-text-centered">{{ form.submit(class_="button is-success is-medium") }}</p>
+                            <br>
+                        </div>
+                    </form>
+                </div>
+                <div class="column is-2 has-background-success-light">
+                </div>
+            </div>
+        </div>
+    </section>
+  </body>
+</html>
+
