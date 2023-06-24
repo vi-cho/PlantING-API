@@ -1,41 +1,159 @@
-<h1>{{ nombre }}</h1>
+<!DOCTYPE html>
+<html>
 
-<p><b>Nombre científico: </b>{{ latin }}</p>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+</head>
 
-<p><b>Nativo de: </b>{{ nativo }}</p>
+<body>
+    <section class="section-has-background-success-light">
+        <div class="container">
+            <div class="box">
+                <h1 class="title is-1 has-text-centered is-spaced">{{ nombre }}</h1>
+            </div>
 
-<p><b>Tipo de material vegetal: </b>{{ material }}</p>
+            <table class="table is-fullwidth is-hoverable">
+                <tr>
+                    <td>
+                        <p><b>Nombre científico: </b></p>
+                    </td>
+                    <td>
+                        <p>{{ latin }}</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p><b>Nativo de: </b></p>
+                    </td>
+                    <td>
+                        <p>{{ nativo }}</p>
+                    </td>
+                </tr>
+                <tr>
+                </tr>
+                <td>
+                    <p><b>Tipo de material vegetal: </b></p>
+                </td>
+                <td>
+                    <p>{{ material }}</p>
+                </td>
+                <tr>
+                    <td>
+                        <p><b>Follaje: </b></p>
+                    </td>
+                    <td>
+                        <p>{{ follaje }}</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p><b>Agua requerida: </b></p>
+                    </td>
+                    <td>
+                        <p>{{ agua }}</p>
+                    </td>
+                </tr>
+                <tr>
+                    {% if luz == "Poca" %}
+                    <td>
+                        <p><b>Prefiere: </b></p>
+                    </td>
+                    <td>
+                        <p>Sombra o semisombra</p>
+                    </td>
+                    {% elif luz == "Media" %}
+                    <td>
+                        <p><b>Prefiere: </b></p>
+                    </td>
+                    <td>
+                        <p>Sol o semisombra</p>
+                    </td>
+                    {% else %}
+                    <td>
+                        <p><b>Prefiere: </b></p>
+                    </td>
+                    <td>
+                        <p>Sol o pleno sol</p>
+                    </td>
+                    {% endif %}
+                </tr>
+                <tr>
+                    <td>
+                        <p><b>Radio máximo (en metros): </b></p>
+                    <td>
+                        <p>{{ radio }}</p>
+                </tr>
+                <tr>
+                    <td>
+                        <p><b>Altura máxima (en metros): </b></p>
+                    </td>
+                    <td>
+                        <p>{{ altura }}</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p><b>Zonas de resistencia al frío (Hardiness Zones): </b></p>
+                    </td>
+                    <td>
+                        <p>{{ hardiness }} - Zona 11A</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p><b>Época óptima para plantar: </b></p>
+                    </td>
+                    <td>
+                        <p>{{ siembra }}</p>
+                    </td>
+                </tr>
+                <tr>
+                    {% if floracion != "No aplica" %}
+                    <td>
+                        <p><b>Época de floración: </b></p>
+                    </td>
+                    <td>
+                        <p>{{ floracion }}</p>
+                    </td>
+                    {% else %}
+                    <td>
+                        <p><b>Época de floración: </b></p>
+                    </td>
+                    <td>
+                        <p>No presenta floración</p>
+                    </td>
+                    {% endif %}
+                </tr>
+                <tr>
+                    {% if poda != "No aplica" %}
+                    <td>
+                        <p><b>Época recomendada para podar: </b></p>
+                    </td>
+                    <td>
+                        <p>{{ poda }}</p>
+                    </td>
+                    {% else %}
+                    <td>
+                        <p><b>Época recomendada para podar: </b></p>
+                    </td>
+                    <td>
+                        <p>Planta no requiere podas</p>
+                    </td>
+                    {% endif %}
+                </tr>
+                <tr>
+                    <td>
+                        <p><b>Descripción: </b></p>
+                    </td>
+                    <td>
+                        <p>{{ descripcion }}</p>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </section>
+</body>
 
-<p><b>Follaje: </b>{{ follaje }}</p>
-
-<p><b>Agua requerida: </b>{{ agua }}</p>
-
-{% if luz == "Poca" %}
-    <p><b>Prefiere: </b>Sombra o semisombra</p>
-{% elif luz == "Media" %}
-    <p><b>Prefiere: </b>Sol o semisombra</p>
-{% else %}
-    <p><b>Prefiere: </b>Sol o pleno sol</p>
-{% endif %}
-
-<p><b>Radio máximo (en metros): </b>{{ radio }}</p>
-
-<p><b>Altura máxima (en metros): </b>{{ altura }}</p>
-
-<p><b>Zonas de resistencia al frío (Hardiness Zones): </b>{{ hardiness }} - Zona 11A</p>
-
-<p><b>Época óptima para plantar: </b>{{ siembra }}</p>
-
-{% if floracion != "No aplica" %}
-    <p><b>Época de floración: </b>{{ floracion }}</p>
-{% else %}
-    <p><b>Época de floración: </b>No presenta floración</p>
-{% endif %}
-
-{% if poda != "No aplica" %}
-    <p><b>Época recomendada para podar: </b>{{ poda }}</p>
-{% else %}
-    <p><b>Época recomendada para podar: </b>Planta no requiere podas</p>
-{% endif %}
-
-<p><b>Descripción: </b>{{ descripcion }}</p>
+</html>
