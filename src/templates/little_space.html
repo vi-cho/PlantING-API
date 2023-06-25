@@ -1,224 +1,330 @@
-<h1>{{ nombre }}</h1>
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+  </head>
+  <body>
 
-<p>Este espacio se compone de {{ largo_db }} especies de plantas distintas</p>
+    <section class="section has-background-success-light">
+      <div class="content">
+        <h1 class="is-size-3 is-title has-text-centered">{{ nombre }}</h1>
+      </div>
+    </section>
 
-<p>El espacio podria diseñarse de 2 formas distintas dependiendo de lo siguiente:</p>
-<ul>
-    <li>El espacio está en un borde del jardín (limita con el borde)</li>
-    <li>El espacio NO está en un borde del jardín (es un bloque central o espacio "isla" en el jardín)</li>
-</ul>
+    <section class="section has-background-success-light">
+      <div class="container">
+        <div class="columns is-vcentered">
+          <div class="column is-3">
+            <p>Este espacio tiene ...</p>
+            <br>
+            <p class="has-text-centered is-size-1">{{ largo_db }}</p>
+            <br>
+            <p class="has-text-right">especies de plantas distintas.</p>
+          </div>
+          <div class="column is-7 is-offset-2">
+            <p>El espacio podria diseñarse de 2 formas distintas dependiendo de lo siguiente:</p>
+            <div class="content">
+              <ul>
+                <li>El espacio está en un borde del jardín (limita con el borde)</li>
+                <li>El espacio NO está en un borde del jardín (es un bloque central o espacio "isla" en el jardín)</li>
+            </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    <section class="section has-background-success-light">
+      <div class="content">
+        <h1 class="is-size-4 is-title has-text-centered">Si el espacio está en un borde...</h1>
+      </div>
+      <br>
+      <div class="container">
+        <div class="columns is-vcentered">
+          <div class="column is-5 has-text-centered">
+            <svg viewBox="19.737 56.22 365.43 174.641" width="365.43" height="174.641">
+                <rect x="92.725" y="131.831" width="317.912" height="125.389" style="fill: rgb(216, 216, 216); stroke: rgb(0, 0, 0);" transform="matrix(1, 0, 0, 1, -38.660367, -40.944043)"></rect>
+                <line style="fill: rgb(216, 216, 216); stroke: rgb(0, 0, 0);" x1="92.725" y1="235.027" x2="411.192" y2="235.027" transform="matrix(1, 0, 0, 1, -38.660367, -40.944043)"></line>
+                <line style="fill: rgb(216, 216, 216); stroke: rgb(0, 0, 0);" x1="92.7" y1="190" x2="411.2" y2="191" transform="matrix(1, 0, 0, 1, -38.660367, -40.944043)"></line>
+                <text style="fill: rgb(51, 51, 51); font-family: Arial, sans-serif; font-size: 10px; white-space: pre;" x="103" y="249.877" transform="matrix(1, 0, 0, 1, -38.660367, -40.944043)">P
+              </text>
+                <text style="fill: rgb(51, 51, 51); font-family: Arial, sans-serif; font-size: 10px; white-space: pre;" x="133" y="249.877" transform="matrix(1, 0, 0, 1, -38.660367, -40.944043)">P
+              </text>
+                <text style="fill: rgb(51, 51, 51); font-family: Arial, sans-serif; font-size: 10px; white-space: pre;" x="310" y="249.877" transform="matrix(1, 0, 0, 1, -38.660367, -40.944043)">P
+              </text>
+                <text style="fill: rgb(51, 51, 51); font-family: Arial, sans-serif; font-size: 10px; white-space: pre;" x="339" y="249.877" transform="matrix(1, 0, 0, 1, -38.660367, -40.944043)">P
+              </text>
+                <text style="fill: rgb(51, 51, 51); font-family: Arial, sans-serif; font-size: 10px; white-space: pre;" x="192" y="249.877" transform="matrix(1, 0, 0, 1, -38.660367, -40.944043)">P
+              </text>
+                <text style="fill: rgb(51, 51, 51); font-family: Arial, sans-serif; font-size: 10px; white-space: pre;" x="280" y="249.877" transform="matrix(1, 0, 0, 1, -38.660367, -40.944043)">P
+              </text>
+                <text style="fill: rgb(51, 51, 51); font-family: Arial, sans-serif; font-size: 10px; white-space: pre;" x="251" y="249.877" transform="matrix(1, 0, 0, 1, -38.660367, -40.944043)">P
+              </text>
+                <text style="fill: rgb(51, 51, 51); font-family: Arial, sans-serif; font-size: 10px; white-space: pre;" x="163" y="249.877" transform="matrix(1, 0, 0, 1, -38.660367, -40.944043)">P
+              </text>
+                <text style="fill: rgb(51, 51, 51); font-family: Arial, sans-serif; font-size: 10px; white-space: pre;" x="222" y="249.877" transform="matrix(1, 0, 0, 1, -38.660367, -40.944043)">P
+              </text>
+                <text style="fill: rgb(51, 51, 51); font-family: Arial, sans-serif; font-size: 10px; white-space: pre;" x="368" y="249.877" transform="matrix(1, 0, 0, 1, -38.660367, -40.944043)">P
+              </text>
+                <text style="fill: rgb(51, 51, 51); font-family: Arial, sans-serif; font-size: 10px; white-space: pre;" x="396" y="249.877" transform="matrix(1, 0, 0, 1, -38.660367, -40.944043)">P
+              </text>
+                <line style="fill: rgb(216, 216, 216); stroke: rgb(0, 0, 0);" x1="110" y1="248.9" x2="131.008" y2="248.898" transform="matrix(1, 0, 0, 1, -38.660367, -40.944043)"></line>
+                <text style="fill: rgb(51, 51, 51); font-family: Arial, sans-serif; font-size: 7px; white-space: pre;" x="112" y="246.103" transform="matrix(1, 0, 0, 1, -38.660367, -40.944043)">50 cm</text>
+                <text style="fill: rgb(51, 51, 51); font-family: Arial, sans-serif; font-size: 16px; white-space: pre;" x="117" y="219.425" transform="matrix(1, 0, 0, 1, -38.660367, -40.944043)">S
+              </text>
+                <text style="fill: rgb(51, 51, 51); font-family: Arial, sans-serif; font-size: 16px; white-space: pre;" x="167" y="219.425" transform="matrix(1, 0, 0, 1, -38.660367, -40.944043)">S
+              </text>
+                <text style="fill: rgb(51, 51, 51); font-family: Arial, sans-serif; font-size: 16px; white-space: pre;" x="217" y="219.425" transform="matrix(1, 0, 0, 1, -38.660367, -40.944043)">S
+              </text>
+                <text style="fill: rgb(51, 51, 51); font-family: Arial, sans-serif; font-size: 16px; white-space: pre;" x="317" y="219.425" transform="matrix(1, 0, 0, 1, -38.660367, -40.944043)">S
+              </text>
+                <text style="fill: rgb(51, 51, 51); font-family: Arial, sans-serif; font-size: 16px; white-space: pre;" x="267" y="219.425" transform="matrix(1, 0, 0, 1, -38.660367, -40.944043)">S
+              </text>
+                <text style="fill: rgb(51, 51, 51); font-family: Arial, sans-serif; font-size: 16px; white-space: pre;" x="367" y="219.425" transform="matrix(1, 0, 0, 1, -38.660367, -40.944043)">S
+              </text>
+                <line style="fill: rgb(216, 216, 216); stroke: rgb(0, 0, 0);" x1="281" y1="218" x2="313" y2="218" transform="matrix(1, 0, 0, 1, -38.660367, -40.944043)"></line>
+                <text style="fill: rgb(51, 51, 51); font-family: Arial, sans-serif; font-size: 9px; white-space: pre;" transform="matrix(1, 0, 0, 1, 97.132623, -180.715777)"><tspan x="148.207" y="352.094">1,25 m</tspan><tspan x="148.207" dy="1em">​</tspan></text>
+                <text style="fill: rgb(51, 51, 51); font-family: Arial, sans-serif; font-size: 18px; white-space: pre;" x="127" y="169.09" transform="matrix(1, 0, 0, 1, -38.660367, -40.944043)">T</text>
+                <text style="fill: rgb(51, 51, 51); font-family: Arial, sans-serif; font-size: 18px; white-space: pre;" x="202" y="169.09" transform="matrix(1, 0, 0, 1, -38.660367, -40.944043)">T</text>
+                <text style="fill: rgb(51, 51, 51); font-family: Arial, sans-serif; font-size: 18px; white-space: pre;" x="277" y="169.09" transform="matrix(1, 0, 0, 1, -38.660367, -40.944043)">T</text>
+                <text style="fill: rgb(51, 51, 51); font-family: Arial, sans-serif; font-size: 18px; white-space: pre;" x="352" y="169.09" transform="matrix(1, 0, 0, 1, -38.660367, -40.944043)">T</text>
+                <line style="fill: rgb(216, 216, 216); stroke: rgb(0, 0, 0);" x1="142" y1="169" x2="196" y2="169" transform="matrix(1, 0, 0, 1, -38.660367, -40.944043)"></line>
+                <text style="fill: rgb(51, 51, 51); font-family: Arial, sans-serif; font-size: 13px; white-space: pre;" x="158" y="163.425" transform="matrix(1, 0, 0, 1, -38.660367, -40.944043)">2 m</text>
+                <text style="fill: rgb(51, 51, 51); font-family: Arial, sans-serif; font-size: 16px; white-space: pre;" x="232" y="119.425" transform="matrix(1, 0, 0, 1, -38.660367, -40.944043)">{{ largo }} m</text>
+                <text style="fill: rgb(51, 51, 51); font-family: Arial, sans-serif; font-size: 16px; white-space: pre;" x="167.071" y="323.799" transform="matrix(0, -1, 1, 0, -282.034092, 339.793004)">{{ ancho }} m</text>
+            </svg>
+            <br>
+            <p>P - Planta primer nivel</p>
+            <p>S - Planta segundo nivel</p>
+            <p>T - Planta tercer nivel</p>
+          </div>
+          <div class="column is-7">
+            <p>Como se ve, conviene un diseño paisajístico de 3 niveles</p>
+            <br>
+            <div class="content">
+              <ul>
+                <li><b>Plantas de primer nivel:</b> actuan como orillas y delimitadoras (distancia entre plantas - 0.5 m)</li>
+                <li><b>Plantas de segundo nivel:</b> arbustos de media altura (distancia entre plantas - 1.25 m)</li>
+                <li><b>Plantas de tercer nivel:</b> grandes árboles (distancia entre plantas - 2 m)</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <br>
+      <br>
+      <div class="container">
+        <div class="columns">
+          <div class="column is-4">
+            <p class="has-text-centered"><b>Plantas primer nivel</b></p>
+            <br>
+            <table class="table is-striped is-fullwidth">
+              <thead>
+                <tr>
+                  <th>Planta</th>
+                  <th>Cantidad</th>
+                  <th>Acción</th>
+                </tr>
+              </thead>
+              <tbody>
+                {% for planta in plantas1 %}
+                  <tr>
+                    <td>{{ planta }}</td>
+                    <td>{{ n_ind_plantas1 }}</td>
+                    <td><a href="{{ url_for('plant_info', nombre=planta) }}">Ver</a></td>
+                  </tr>
+                {% endfor %}
+              </tbody>
+            </table>
+          </div>
+          <div class="column is-4">
+            <p class="has-text-centered"><b>Plantas segundo nivel</b></p>
+            <br>
+            <table class="table is-striped is-fullwidth">
+              <thead>
+                <tr>
+                  <th>Planta</th>
+                  <th>Cantidad</th>
+                  <th>Acción</th>
+                </tr>
+              </thead>
+              <tbody>
+                {% for planta in plantas2 %}
+                  <tr>
+                    <td>{{ planta }}</td>
+                    <td>{{ n_ind_plantas2 }}</td>
+                    <td><a href="{{ url_for('plant_info', nombre=planta) }}">Ver</a></td>
+                  </tr>
+                {% endfor %}
+              </tbody>
+            </table>
+          </div>
+          <div class="column is-4">
+            <p class="has-text-centered"><b>Plantas tercer nivel</b></p>
+            <br>
+            <table class="table is-striped is-fullwidth">
+              <thead>
+                <tr>
+                  <th>Planta</th>
+                  <th>Cantidad</th>
+                  <th>Acción</th>
+                </tr>
+              </thead>
+              <tbody>
+                {% for planta in plantas3 %}
+                  <tr>
+                    <td>{{ planta }}</td>
+                    <td>{{ n_ind_plantas3 }}</td>
+                    <td><a href="{{ url_for('plant_info', nombre=planta) }}">Ver</a></td>
+                  </tr>
+                {% endfor %}
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+      <br>
+    </section>
+    
 
-<h3>Si el espacio está en un borde...</h3>
-
-<p>Entonces, resulta conveniente el diseño paisajístico de los 3 niveles.</p>
-<p>De esta forma, el espacio podría estar compuesto por plantas de distintas alturas. Lo más adelante se ubican las plantas de primer nivel (altura máxima 0.5 metros), que actuan como orillas y delimitadoras. Detras de estas se ubican las plantas de segundo nivel (altura media), que suelen ser arbustos de gran tamaño. Por último, lo más al fondo (junto al borde) se ubican las plantas de tercer nivel, aquellos árboles de mayor tamaño que quedan por sobre nuestras cabezas.</p>
-
-<p>Una distribucion del espacio podría ser de la siguiente manera:</p>
-
-<svg viewBox="19.737 56.22 365.43 174.641" width="365.43" height="174.641">
-    <rect x="92.725" y="131.831" width="317.912" height="125.389" style="fill: rgb(216, 216, 216); stroke: rgb(0, 0, 0);" transform="matrix(1, 0, 0, 1, -38.660367, -40.944043)"></rect>
-    <line style="fill: rgb(216, 216, 216); stroke: rgb(0, 0, 0);" x1="92.725" y1="235.027" x2="411.192" y2="235.027" transform="matrix(1, 0, 0, 1, -38.660367, -40.944043)"></line>
-    <line style="fill: rgb(216, 216, 216); stroke: rgb(0, 0, 0);" x1="92.7" y1="190" x2="411.2" y2="191" transform="matrix(1, 0, 0, 1, -38.660367, -40.944043)"></line>
-    <text style="fill: rgb(51, 51, 51); font-family: Arial, sans-serif; font-size: 10px; white-space: pre;" x="103" y="249.877" transform="matrix(1, 0, 0, 1, -38.660367, -40.944043)">P
-  </text>
-    <text style="fill: rgb(51, 51, 51); font-family: Arial, sans-serif; font-size: 10px; white-space: pre;" x="133" y="249.877" transform="matrix(1, 0, 0, 1, -38.660367, -40.944043)">P
-  </text>
-    <text style="fill: rgb(51, 51, 51); font-family: Arial, sans-serif; font-size: 10px; white-space: pre;" x="310" y="249.877" transform="matrix(1, 0, 0, 1, -38.660367, -40.944043)">P
-  </text>
-    <text style="fill: rgb(51, 51, 51); font-family: Arial, sans-serif; font-size: 10px; white-space: pre;" x="339" y="249.877" transform="matrix(1, 0, 0, 1, -38.660367, -40.944043)">P
-  </text>
-    <text style="fill: rgb(51, 51, 51); font-family: Arial, sans-serif; font-size: 10px; white-space: pre;" x="192" y="249.877" transform="matrix(1, 0, 0, 1, -38.660367, -40.944043)">P
-  </text>
-    <text style="fill: rgb(51, 51, 51); font-family: Arial, sans-serif; font-size: 10px; white-space: pre;" x="280" y="249.877" transform="matrix(1, 0, 0, 1, -38.660367, -40.944043)">P
-  </text>
-    <text style="fill: rgb(51, 51, 51); font-family: Arial, sans-serif; font-size: 10px; white-space: pre;" x="251" y="249.877" transform="matrix(1, 0, 0, 1, -38.660367, -40.944043)">P
-  </text>
-    <text style="fill: rgb(51, 51, 51); font-family: Arial, sans-serif; font-size: 10px; white-space: pre;" x="163" y="249.877" transform="matrix(1, 0, 0, 1, -38.660367, -40.944043)">P
-  </text>
-    <text style="fill: rgb(51, 51, 51); font-family: Arial, sans-serif; font-size: 10px; white-space: pre;" x="222" y="249.877" transform="matrix(1, 0, 0, 1, -38.660367, -40.944043)">P
-  </text>
-    <text style="fill: rgb(51, 51, 51); font-family: Arial, sans-serif; font-size: 10px; white-space: pre;" x="368" y="249.877" transform="matrix(1, 0, 0, 1, -38.660367, -40.944043)">P
-  </text>
-    <text style="fill: rgb(51, 51, 51); font-family: Arial, sans-serif; font-size: 10px; white-space: pre;" x="396" y="249.877" transform="matrix(1, 0, 0, 1, -38.660367, -40.944043)">P
-  </text>
-    <line style="fill: rgb(216, 216, 216); stroke: rgb(0, 0, 0);" x1="110" y1="248.9" x2="131.008" y2="248.898" transform="matrix(1, 0, 0, 1, -38.660367, -40.944043)"></line>
-    <text style="fill: rgb(51, 51, 51); font-family: Arial, sans-serif; font-size: 7px; white-space: pre;" x="112" y="246.103" transform="matrix(1, 0, 0, 1, -38.660367, -40.944043)">50 cm</text>
-    <text style="fill: rgb(51, 51, 51); font-family: Arial, sans-serif; font-size: 16px; white-space: pre;" x="117" y="219.425" transform="matrix(1, 0, 0, 1, -38.660367, -40.944043)">S
-  </text>
-    <text style="fill: rgb(51, 51, 51); font-family: Arial, sans-serif; font-size: 16px; white-space: pre;" x="167" y="219.425" transform="matrix(1, 0, 0, 1, -38.660367, -40.944043)">S
-  </text>
-    <text style="fill: rgb(51, 51, 51); font-family: Arial, sans-serif; font-size: 16px; white-space: pre;" x="217" y="219.425" transform="matrix(1, 0, 0, 1, -38.660367, -40.944043)">S
-  </text>
-    <text style="fill: rgb(51, 51, 51); font-family: Arial, sans-serif; font-size: 16px; white-space: pre;" x="317" y="219.425" transform="matrix(1, 0, 0, 1, -38.660367, -40.944043)">S
-  </text>
-    <text style="fill: rgb(51, 51, 51); font-family: Arial, sans-serif; font-size: 16px; white-space: pre;" x="267" y="219.425" transform="matrix(1, 0, 0, 1, -38.660367, -40.944043)">S
-  </text>
-    <text style="fill: rgb(51, 51, 51); font-family: Arial, sans-serif; font-size: 16px; white-space: pre;" x="367" y="219.425" transform="matrix(1, 0, 0, 1, -38.660367, -40.944043)">S
-  </text>
-    <line style="fill: rgb(216, 216, 216); stroke: rgb(0, 0, 0);" x1="281" y1="218" x2="313" y2="218" transform="matrix(1, 0, 0, 1, -38.660367, -40.944043)"></line>
-    <text style="fill: rgb(51, 51, 51); font-family: Arial, sans-serif; font-size: 9px; white-space: pre;" transform="matrix(1, 0, 0, 1, 97.132623, -180.715777)"><tspan x="148.207" y="352.094">1,25 m</tspan><tspan x="148.207" dy="1em">​</tspan></text>
-    <text style="fill: rgb(51, 51, 51); font-family: Arial, sans-serif; font-size: 18px; white-space: pre;" x="127" y="169.09" transform="matrix(1, 0, 0, 1, -38.660367, -40.944043)">T</text>
-    <text style="fill: rgb(51, 51, 51); font-family: Arial, sans-serif; font-size: 18px; white-space: pre;" x="202" y="169.09" transform="matrix(1, 0, 0, 1, -38.660367, -40.944043)">T</text>
-    <text style="fill: rgb(51, 51, 51); font-family: Arial, sans-serif; font-size: 18px; white-space: pre;" x="277" y="169.09" transform="matrix(1, 0, 0, 1, -38.660367, -40.944043)">T</text>
-    <text style="fill: rgb(51, 51, 51); font-family: Arial, sans-serif; font-size: 18px; white-space: pre;" x="352" y="169.09" transform="matrix(1, 0, 0, 1, -38.660367, -40.944043)">T</text>
-    <line style="fill: rgb(216, 216, 216); stroke: rgb(0, 0, 0);" x1="142" y1="169" x2="196" y2="169" transform="matrix(1, 0, 0, 1, -38.660367, -40.944043)"></line>
-    <text style="fill: rgb(51, 51, 51); font-family: Arial, sans-serif; font-size: 13px; white-space: pre;" x="158" y="163.425" transform="matrix(1, 0, 0, 1, -38.660367, -40.944043)">2 m</text>
-    <text style="fill: rgb(51, 51, 51); font-family: Arial, sans-serif; font-size: 16px; white-space: pre;" x="232" y="119.425" transform="matrix(1, 0, 0, 1, -38.660367, -40.944043)">{{ largo }} m</text>
-    <text style="fill: rgb(51, 51, 51); font-family: Arial, sans-serif; font-size: 16px; white-space: pre;" x="167.071" y="323.799" transform="matrix(0, -1, 1, 0, -282.034092, 339.793004)">{{ ancho }} m</text>
-</svg>
-
-<p>Donde cada P representa una planta de primer nivel, cada S una planta de segundo nivel y cada T una planta de tercer nivel. Como se observa, debido a los tamaños que alcanzan, cada planta del primer nivel debe colocarse a una distancia de 0.5 metros entre cada una, cada planta del segundo nivel a una distancia de 1.25 metros y cada planta del tercer nivel a una distancia de 2 metros.</p>
-<p>Según el tamaño del espacio, este podría tener un total de {{ n_plantas1 }} plantas de primer nivel. Una buena combinación de plantas, junto a su respectiva cantidad, podría ser la siguiente:</p>
-
-<table>
-    <tr>
-        <th>Planta</th>
-        <th>Cantidad</th>
-        <th>Acción</th>
-    </tr>
-    {% for planta in plantas1 %}
-        <tr>
-            <td>{{ planta }}</td>
-            <td>{{ n_ind_plantas1 }}</td>
-            <td><a href="{{ url_for('plant_info', nombre=planta) }}">Ver</a></td>
-        </tr>
-    {% endfor %}
-</table>
-
-<p>Por otro lado, el espacio podría tener un total de {{ n_plantas2 }} plantas de segundo nivel. Podría funcionar lo siguiente:</p>
-<table>
-    <tr>
-        <th>Planta</th>
-        <th>Cantidad</th>
-        <th>Acción</th>
-    </tr>
-    {% for planta in plantas2 %}
-        <tr>
-            <td>{{ planta }}</td>
-            <td>{{ n_ind_plantas2 }}</td>
-            <td><a href="{{ url_for('plant_info', nombre=planta) }}">Ver</a></td>
-        </tr>
-    {% endfor %}
-</table>
-
-<p>Y también, se podrían tener un total de {{ n_plantas3 }} plantas de tercer nivel. Las siguientes son buenas opciones:</p>
-<table>
-    <tr>
-        <th>Planta</th>
-        <th>Cantidad</th>
-        <th>Acción</th>
-    </tr>
-    {% for planta in plantas3 %}
-        <tr>
-            <td>{{ planta }}</td>
-            <td>{{ n_ind_plantas3 }}</td>
-            <td><a href="{{ url_for('plant_info', nombre=planta) }}">Ver</a></td>
-        </tr>
-    {% endfor %}
-</table>
-
-<p>El cómo distribuir las plantas dentro del espacio queda a tu criterio. Podrías colocarlas intercaladas, por grupos, etc. Lo único importante es mantener los 3 niveles, es decir, las plantas de primer nivel van adelante, detrás de ellas las de segundo nivel y al fondo las de nivel tercero.</p>
-
-<br>
-<h3>Si el espacio NO está en un borde...</h3>
-
-<p>Entonces, como se trata de un bloque central o bloque "isla", lo mejor es utilizar solamente plantas de pequeño o mediano porte.</p>
-<p>De esta forma, el espacio podría componerse de pequeñas plantas que actúen como delimitadoras y de medianos arbustos que ocupen su interior.</p>
-
-<p>Una distribución del espacio podría ser la siguiente:</p>
-
-<svg viewBox="44.242 70.179 354.344 197.797" width="354.344" height="197.797">
-    <rect x="76.422" y="100.046" width="310.1" height="154.904" style="fill: rgb(216, 216, 216); stroke: rgb(0, 0, 0);"></rect>
-    <rect x="97.953" y="122.176" width="267" height="112.44" style="fill: rgb(216, 216, 216); stroke: rgb(0, 0, 0);"></rect>
-    <text style="fill: rgb(51, 51, 51); font-family: Arial, sans-serif; font-size: 12px; white-space: pre;" x="83" y="151.766">D</text>
-    <text style="fill: rgb(51, 51, 51); font-family: Arial, sans-serif; font-size: 12px; white-space: pre;" x="140" y="115.766">D</text>
-    <text style="fill: rgb(51, 51, 51); font-family: Arial, sans-serif; font-size: 12px; white-space: pre;" x="171" y="115.766">D</text>
-    <text style="fill: rgb(51, 51, 51); font-family: Arial, sans-serif; font-size: 12px; white-space: pre;" x="371" y="213.766">D</text>
-    <text style="fill: rgb(51, 51, 51); font-family: Arial, sans-serif; font-size: 12px; white-space: pre;" x="324" y="115.766">D</text>
-    <text style="fill: rgb(51, 51, 51); font-family: Arial, sans-serif; font-size: 12px; white-space: pre;" x="233" y="249.766">D</text>
-    <text style="fill: rgb(51, 51, 51); font-family: Arial, sans-serif; font-size: 12px; white-space: pre;" x="295" y="115.766">D</text>
-    <text style="fill: rgb(51, 51, 51); font-family: Arial, sans-serif; font-size: 12px; white-space: pre;" x="83" y="182.766">D</text>
-    <text style="fill: rgb(51, 51, 51); font-family: Arial, sans-serif; font-size: 12px; white-space: pre;" x="202" y="115.766">D</text>
-    <text style="fill: rgb(51, 51, 51); font-family: Arial, sans-serif; font-size: 12px; white-space: pre;" x="233" y="115.766">D</text>
-    <text style="fill: rgb(51, 51, 51); font-family: Arial, sans-serif; font-size: 12px; white-space: pre;" x="371" y="120.766">D</text>
-    <text style="fill: rgb(51, 51, 51); font-family: Arial, sans-serif; font-size: 12px; white-space: pre;" x="371" y="182.766">D</text>
-    <text style="fill: rgb(51, 51, 51); font-family: Arial, sans-serif; font-size: 12px; white-space: pre;" x="371" y="151.766">D</text>
-    <text style="fill: rgb(51, 51, 51); font-family: Arial, sans-serif; font-size: 12px; white-space: pre;" x="202" y="249.766">D</text>
-    <text style="fill: rgb(51, 51, 51); font-family: Arial, sans-serif; font-size: 12px; white-space: pre;" x="264" y="249.766">D</text>
-    <text style="fill: rgb(51, 51, 51); font-family: Arial, sans-serif; font-size: 12px; white-space: pre;" x="295" y="249.766">D</text>
-    <text style="fill: rgb(51, 51, 51); font-family: Arial, sans-serif; font-size: 12px; white-space: pre;" x="324" y="249.766">D</text>
-    <text style="fill: rgb(51, 51, 51); font-family: Arial, sans-serif; font-size: 12px; white-space: pre;" x="83" y="120.766">D</text>
-    <text style="fill: rgb(51, 51, 51); font-family: Arial, sans-serif; font-size: 12px; white-space: pre;" x="109" y="115.766">D</text>
-    <text style="fill: rgb(51, 51, 51); font-family: Arial, sans-serif; font-size: 12px; white-space: pre;" x="371" y="244.766">D</text>
-    <text style="fill: rgb(51, 51, 51); font-family: Arial, sans-serif; font-size: 12px; white-space: pre;" x="83" y="244.766">D</text>
-    <text style="fill: rgb(51, 51, 51); font-family: Arial, sans-serif; font-size: 12px; white-space: pre;" x="83" y="213.766">D</text>
-    <text style="fill: rgb(51, 51, 51); font-family: Arial, sans-serif; font-size: 12px; white-space: pre;" x="264" y="115.766">D</text>
-    <text style="fill: rgb(51, 51, 51); font-family: Arial, sans-serif; font-size: 12px; white-space: pre;" x="171" y="249.766">D</text>
-    <text style="fill: rgb(51, 51, 51); font-family: Arial, sans-serif; font-size: 12px; white-space: pre;" x="140" y="249.766">D</text>
-    <text style="fill: rgb(51, 51, 51); font-family: Arial, sans-serif; font-size: 12px; white-space: pre;" x="109" y="249.766">D</text>
-    <text style="fill: rgb(51, 51, 51); font-family: Arial, sans-serif; font-size: 16px; white-space: pre;" x="193.598" y="184.354">A</text>
-    <text style="fill: rgb(51, 51, 51); font-family: Arial, sans-serif; font-size: 16px; white-space: pre;" x="223.598" y="215.354">A</text>
-    <text style="fill: rgb(51, 51, 51); font-family: Arial, sans-serif; font-size: 16px; white-space: pre;" x="163.598" y="152.354">A</text>
-    <text style="fill: rgb(51, 51, 51); font-family: Arial, sans-serif; font-size: 16px; white-space: pre;" x="163.598" y="215.354">A</text>
-    <text style="fill: rgb(51, 51, 51); font-family: Arial, sans-serif; font-size: 16px; white-space: pre;" x="253.598" y="184.354">A</text>
-    <text style="fill: rgb(51, 51, 51); font-family: Arial, sans-serif; font-size: 16px; white-space: pre;" x="223.598" y="152.354">A</text>
-    <text style="fill: rgb(51, 51, 51); font-family: Arial, sans-serif; font-size: 16px; white-space: pre;" x="133.598" y="184.354">A</text>
-    <text style="fill: rgb(51, 51, 51); font-family: Arial, sans-serif; font-size: 16px; white-space: pre;" x="108.598" y="215.354">A</text>
-    <text style="fill: rgb(51, 51, 51); font-family: Arial, sans-serif; font-size: 16px; white-space: pre;" x="108.598" y="152.354">A</text>
-    <text style="fill: rgb(51, 51, 51); font-family: Arial, sans-serif; font-size: 16px; white-space: pre;" x="283.598" y="215.354">A</text>
-    <text style="fill: rgb(51, 51, 51); font-family: Arial, sans-serif; font-size: 16px; white-space: pre;" x="313.598" y="184.354">A</text>
-    <text style="fill: rgb(51, 51, 51); font-family: Arial, sans-serif; font-size: 16px; white-space: pre;" x="283.598" y="152.354">A</text>
-    <text style="fill: rgb(51, 51, 51); font-family: Arial, sans-serif; font-size: 16px; white-space: pre;" x="343.598" y="152.354">A</text>
-    <text style="fill: rgb(51, 51, 51); font-family: Arial, sans-serif; font-size: 16px; white-space: pre;" x="343.613" y="215.374">A</text>
-    <text style="fill: rgb(51, 51, 51); font-family: Arial, sans-serif; font-size: 12px; white-space: pre;" x="352" y="249.78">D</text>
-    <text style="fill: rgb(51, 51, 51); font-family: Arial, sans-serif; font-size: 12px; white-space: pre;" x="352" y="115.78">D</text>
-    <line style="fill: rgb(216, 216, 216); stroke: rgb(0, 0, 0);" x1="174.368" y1="202.824" x2="190.795" y2="187.424"></line>
-    <line style="fill: rgb(216, 216, 216); stroke: rgb(0, 0, 0);" x1="208" y1="187.4" x2="224.35" y2="202.858"></line>
-    <text style="fill: rgb(51, 51, 51); font-family: Arial, sans-serif; font-size: 8px; white-space: pre;" x="163" y="191.187" transform="matrix(0.719339, -0.694659, 0.694659, 0.719339, -80.366243, 174.591784)">1,25 m</text>
-    <text style="fill: rgb(51, 51, 51); font-family: Arial, sans-serif; font-size: 8px; white-space: pre;" x="212" y="185.187" transform="matrix(0.71934, 0.694658, -0.694658, 0.71934, 187.211352, -98.310159)">1,25 m</text>
-    <line style="fill: rgb(216, 216, 216); stroke: rgb(0, 0, 0);" x1="273" y1="249.5" x2="293.464" y2="249.539"></line>
-    <text style="fill: rgb(51, 51, 51); font-family: Arial, sans-serif; font-size: 6px; white-space: pre;" x="275" y="246.647">50 cm</text>
-    <text style="fill: rgb(51, 51, 51); font-family: Arial, sans-serif; font-size: 6px; white-space: pre;" x="151" y="112.647">50 cm</text>
-    <line style="fill: rgb(216, 216, 216); stroke: rgb(0, 0, 0);" x1="149.3" y1="116" x2="170.8" y2="116"></line>
-    <text style="fill: rgb(51, 51, 51); font-family: Arial, sans-serif; font-size: 16px; white-space: pre;" x="214" y="88.427">{{ largo }} m</text>
-    <text style="fill: rgb(51, 51, 51); font-family: Arial, sans-serif; font-size: 16px; white-space: pre;" x="204.142" y="315.76" transform="matrix(0, -1, 1, 0, -251.386356, 393.811834)">{{ ancho }} m</text>
-</svg>
-
-<p>Donde cada D representa una pequeña planta delimitadora, y cada A un arbusto mediano del interior del espacio. Como se observa, debido a los tamaños que alcanzan, cada planta delimitadora debe colocarse a una distancia de 0.5 metros entre cada una y cada arbusto del interior a una distancia de 1,25 metros entre arbusto.</p>
-
-<p>Según el tamaño del espacio, este podría tener un total de {{ n_plantas1_cen }} pequeñas plantas delimitadoras. Una buena combinación, junto a su respectiva cantidad, podría ser la siguiente:</p>
-<table>
-    <tr>
-        <th>Planta</th>
-        <th>Cantidad</th>
-        <th>Acción</th>
-    </tr>
-    {% for planta in plantas1 %}
-        <tr>
-            <td>{{ planta }}</td>
-            <td>{{ n_ind_plantas1_cen }}</td>
-            <td><a href="{{ url_for('plant_info', nombre=planta) }}">Ver</a></td>
-        </tr>
-    {% endfor %}
-</table>
-
-<p>Y también, se podrían tener un total de {{ n_plantas2_cen }} arbustos medianos en su interior. Las siguientes son buenas opciones:</p>
-<table>
-    <tr>
-        <th>Planta</th>
-        <th>Cantidad</th>
-        <th>Acción</th>
-    </tr>
-    {% for planta in plantas2 %}
-        <tr>
-            <td>{{ planta }}</td>
-            <td>{{ n_ind_plantas2_cen }}</td>
-            <td><a href="{{ url_for('plant_info', nombre=planta) }}">Ver</a></td>
-        </tr>
-    {% endfor %}
-</table>
-
-<p>El cómo distribuir las plantas dentro del espacio queda a tu criterio. Podrías colocarlas intercaladas, por grupos, etc. Lo único importante es colocar las plantas delimitadoras en los bordes y los arbustos medianos en el interior.</p>
-
-<br>
-<p>¡Eso es todo! Entre las 2 que te damos, elige la opción que más te corresponda, para así poder disfrutar de este hermoso espacio que buscas diseñar.</p>
+    <section class="section has-background-success-light">
+      <br>
+      <div class="content">
+        <h1 class="is-size-4 is-title has-text-centered">Si el espacio NO está en un borde...</h1>
+      </div>
+      <br>
+      <div class="container">
+        <div class="columns is-vcentered">
+          <div class="column is-5 has-text-centered">
+            <svg viewBox="44.242 70.179 354.344 197.797" width="354.344" height="197.797">
+                <rect x="76.422" y="100.046" width="310.1" height="154.904" style="fill: rgb(216, 216, 216); stroke: rgb(0, 0, 0);"></rect>
+                <rect x="97.953" y="122.176" width="267" height="112.44" style="fill: rgb(216, 216, 216); stroke: rgb(0, 0, 0);"></rect>
+                <text style="fill: rgb(51, 51, 51); font-family: Arial, sans-serif; font-size: 12px; white-space: pre;" x="83" y="151.766">D</text>
+                <text style="fill: rgb(51, 51, 51); font-family: Arial, sans-serif; font-size: 12px; white-space: pre;" x="140" y="115.766">D</text>
+                <text style="fill: rgb(51, 51, 51); font-family: Arial, sans-serif; font-size: 12px; white-space: pre;" x="171" y="115.766">D</text>
+                <text style="fill: rgb(51, 51, 51); font-family: Arial, sans-serif; font-size: 12px; white-space: pre;" x="371" y="213.766">D</text>
+                <text style="fill: rgb(51, 51, 51); font-family: Arial, sans-serif; font-size: 12px; white-space: pre;" x="324" y="115.766">D</text>
+                <text style="fill: rgb(51, 51, 51); font-family: Arial, sans-serif; font-size: 12px; white-space: pre;" x="233" y="249.766">D</text>
+                <text style="fill: rgb(51, 51, 51); font-family: Arial, sans-serif; font-size: 12px; white-space: pre;" x="295" y="115.766">D</text>
+                <text style="fill: rgb(51, 51, 51); font-family: Arial, sans-serif; font-size: 12px; white-space: pre;" x="83" y="182.766">D</text>
+                <text style="fill: rgb(51, 51, 51); font-family: Arial, sans-serif; font-size: 12px; white-space: pre;" x="202" y="115.766">D</text>
+                <text style="fill: rgb(51, 51, 51); font-family: Arial, sans-serif; font-size: 12px; white-space: pre;" x="233" y="115.766">D</text>
+                <text style="fill: rgb(51, 51, 51); font-family: Arial, sans-serif; font-size: 12px; white-space: pre;" x="371" y="120.766">D</text>
+                <text style="fill: rgb(51, 51, 51); font-family: Arial, sans-serif; font-size: 12px; white-space: pre;" x="371" y="182.766">D</text>
+                <text style="fill: rgb(51, 51, 51); font-family: Arial, sans-serif; font-size: 12px; white-space: pre;" x="371" y="151.766">D</text>
+                <text style="fill: rgb(51, 51, 51); font-family: Arial, sans-serif; font-size: 12px; white-space: pre;" x="202" y="249.766">D</text>
+                <text style="fill: rgb(51, 51, 51); font-family: Arial, sans-serif; font-size: 12px; white-space: pre;" x="264" y="249.766">D</text>
+                <text style="fill: rgb(51, 51, 51); font-family: Arial, sans-serif; font-size: 12px; white-space: pre;" x="295" y="249.766">D</text>
+                <text style="fill: rgb(51, 51, 51); font-family: Arial, sans-serif; font-size: 12px; white-space: pre;" x="324" y="249.766">D</text>
+                <text style="fill: rgb(51, 51, 51); font-family: Arial, sans-serif; font-size: 12px; white-space: pre;" x="83" y="120.766">D</text>
+                <text style="fill: rgb(51, 51, 51); font-family: Arial, sans-serif; font-size: 12px; white-space: pre;" x="109" y="115.766">D</text>
+                <text style="fill: rgb(51, 51, 51); font-family: Arial, sans-serif; font-size: 12px; white-space: pre;" x="371" y="244.766">D</text>
+                <text style="fill: rgb(51, 51, 51); font-family: Arial, sans-serif; font-size: 12px; white-space: pre;" x="83" y="244.766">D</text>
+                <text style="fill: rgb(51, 51, 51); font-family: Arial, sans-serif; font-size: 12px; white-space: pre;" x="83" y="213.766">D</text>
+                <text style="fill: rgb(51, 51, 51); font-family: Arial, sans-serif; font-size: 12px; white-space: pre;" x="264" y="115.766">D</text>
+                <text style="fill: rgb(51, 51, 51); font-family: Arial, sans-serif; font-size: 12px; white-space: pre;" x="171" y="249.766">D</text>
+                <text style="fill: rgb(51, 51, 51); font-family: Arial, sans-serif; font-size: 12px; white-space: pre;" x="140" y="249.766">D</text>
+                <text style="fill: rgb(51, 51, 51); font-family: Arial, sans-serif; font-size: 12px; white-space: pre;" x="109" y="249.766">D</text>
+                <text style="fill: rgb(51, 51, 51); font-family: Arial, sans-serif; font-size: 16px; white-space: pre;" x="193.598" y="184.354">A</text>
+                <text style="fill: rgb(51, 51, 51); font-family: Arial, sans-serif; font-size: 16px; white-space: pre;" x="223.598" y="215.354">A</text>
+                <text style="fill: rgb(51, 51, 51); font-family: Arial, sans-serif; font-size: 16px; white-space: pre;" x="163.598" y="152.354">A</text>
+                <text style="fill: rgb(51, 51, 51); font-family: Arial, sans-serif; font-size: 16px; white-space: pre;" x="163.598" y="215.354">A</text>
+                <text style="fill: rgb(51, 51, 51); font-family: Arial, sans-serif; font-size: 16px; white-space: pre;" x="253.598" y="184.354">A</text>
+                <text style="fill: rgb(51, 51, 51); font-family: Arial, sans-serif; font-size: 16px; white-space: pre;" x="223.598" y="152.354">A</text>
+                <text style="fill: rgb(51, 51, 51); font-family: Arial, sans-serif; font-size: 16px; white-space: pre;" x="133.598" y="184.354">A</text>
+                <text style="fill: rgb(51, 51, 51); font-family: Arial, sans-serif; font-size: 16px; white-space: pre;" x="108.598" y="215.354">A</text>
+                <text style="fill: rgb(51, 51, 51); font-family: Arial, sans-serif; font-size: 16px; white-space: pre;" x="108.598" y="152.354">A</text>
+                <text style="fill: rgb(51, 51, 51); font-family: Arial, sans-serif; font-size: 16px; white-space: pre;" x="283.598" y="215.354">A</text>
+                <text style="fill: rgb(51, 51, 51); font-family: Arial, sans-serif; font-size: 16px; white-space: pre;" x="313.598" y="184.354">A</text>
+                <text style="fill: rgb(51, 51, 51); font-family: Arial, sans-serif; font-size: 16px; white-space: pre;" x="283.598" y="152.354">A</text>
+                <text style="fill: rgb(51, 51, 51); font-family: Arial, sans-serif; font-size: 16px; white-space: pre;" x="343.598" y="152.354">A</text>
+                <text style="fill: rgb(51, 51, 51); font-family: Arial, sans-serif; font-size: 16px; white-space: pre;" x="343.613" y="215.374">A</text>
+                <text style="fill: rgb(51, 51, 51); font-family: Arial, sans-serif; font-size: 12px; white-space: pre;" x="352" y="249.78">D</text>
+                <text style="fill: rgb(51, 51, 51); font-family: Arial, sans-serif; font-size: 12px; white-space: pre;" x="352" y="115.78">D</text>
+                <line style="fill: rgb(216, 216, 216); stroke: rgb(0, 0, 0);" x1="174.368" y1="202.824" x2="190.795" y2="187.424"></line>
+                <line style="fill: rgb(216, 216, 216); stroke: rgb(0, 0, 0);" x1="208" y1="187.4" x2="224.35" y2="202.858"></line>
+                <text style="fill: rgb(51, 51, 51); font-family: Arial, sans-serif; font-size: 8px; white-space: pre;" x="163" y="191.187" transform="matrix(0.719339, -0.694659, 0.694659, 0.719339, -80.366243, 174.591784)">1,25 m</text>
+                <text style="fill: rgb(51, 51, 51); font-family: Arial, sans-serif; font-size: 8px; white-space: pre;" x="212" y="185.187" transform="matrix(0.71934, 0.694658, -0.694658, 0.71934, 187.211352, -98.310159)">1,25 m</text>
+                <line style="fill: rgb(216, 216, 216); stroke: rgb(0, 0, 0);" x1="273" y1="249.5" x2="293.464" y2="249.539"></line>
+                <text style="fill: rgb(51, 51, 51); font-family: Arial, sans-serif; font-size: 6px; white-space: pre;" x="275" y="246.647">50 cm</text>
+                <text style="fill: rgb(51, 51, 51); font-family: Arial, sans-serif; font-size: 6px; white-space: pre;" x="151" y="112.647">50 cm</text>
+                <line style="fill: rgb(216, 216, 216); stroke: rgb(0, 0, 0);" x1="149.3" y1="116" x2="170.8" y2="116"></line>
+                <text style="fill: rgb(51, 51, 51); font-family: Arial, sans-serif; font-size: 16px; white-space: pre;" x="214" y="88.427">{{ largo }} m</text>
+                <text style="fill: rgb(51, 51, 51); font-family: Arial, sans-serif; font-size: 16px; white-space: pre;" x="204.142" y="315.76" transform="matrix(0, -1, 1, 0, -251.386356, 393.811834)">{{ ancho }} m</text>
+            </svg>
+            <br>
+            <p>D - Planta delimitadora</p>
+            <p>A - Arbusto mediano de centro</p>
+          </div>
+          <div class="column is-7">
+            <p>Como se ve, en este caso conviene utilizar solamente plantas de pequeño o mediano porte</p>
+            <br>
+            <div class="content">
+              <ul>
+                <li><b>Plantas delimitadoras:</b> como las de primer nivel, actuan como orillas (distancia entre plantas - 0.5 m)</li>
+                <li><b>Arbustos medianos de centro:</b> arbustos para rellenar el interior del bloque (distancia entre plantas - 1.25 m)</li>
+            </ul>
+          </div>
+          </div>
+        </div>
+      </div>
+      <br>
+      <br>
+      <div class="container">
+        <div class="columns">
+          <div class="column is-4 is-offset-1">
+            <p class="has-text-centered"><b>Plantas delimitadoras</b></p>
+            <br>
+            <table class="table is-striped is-fullwidth">
+              <thead>
+                <tr>
+                  <th>Planta</th>
+                  <th>Cantidad</th>
+                  <th>Acción</th>
+                </tr>
+              </thead>
+              <tbody>
+                {% for planta in plantas1 %}
+                  <tr>
+                    <td>{{ planta }}</td>
+                    <td>{{ n_ind_plantas1_cen }}</td>
+                    <td><a href="{{ url_for('plant_info', nombre=planta) }}">Ver</a></td>
+                  </tr>
+                {% endfor %}
+              </tbody>
+            </table>
+          </div>
+          <div class="column is-4 is-offset-2">
+            <p class="has-text-centered"><b>Arbustos medianos de centro</b></p>
+            <br>
+            <table class="table is-striped is-fullwidth">
+              <thead>
+                <tr>
+                  <th>Planta</th>
+                  <th>Cantidad</th>
+                  <th>Acción</th>
+                </tr>
+              </thead>
+              <tbody>
+                {% for planta in plantas2 %}
+                  <tr>
+                    <td>{{ planta }}</td>
+                    <td>{{ n_ind_plantas2_cen }}</td>
+                    <td><a href="{{ url_for('plant_info', nombre=planta) }}">Ver</a></td>
+                  </tr>
+                {% endfor %}
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    <section class="section has-background-success-light">
+      <div class="content">
+        <p class="has-text-centered">¡Eso es todo! Entre las 2 que te damos, elige la opción que más te corresponda, para así poder disfrutar de este hermoso espacio que buscas diseñar.</p>
+      </div>
+    </section>
+  </body>
+</html> 

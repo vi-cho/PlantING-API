@@ -8,7 +8,7 @@ def distribuir(db, nombre, ancho, largo, accion, db_original):
     if accion == "Todo":
         if nombre == "Jardín de menor consumo hídrico":
             return entero_menor_consumo(db, ancho, largo, db_original)
-        elif nombre == "Jardín más colorido":
+        elif nombre == "Jardín mas colorido":
             return entero_colorido(db, ancho, largo, db_original)
         elif nombre == "Jardín mas atractivo para polinizadores":
             return entero_polinizadores(db, ancho, largo, db_original)
@@ -23,7 +23,7 @@ def distribuir(db, nombre, ancho, largo, accion, db_original):
     else:
         if nombre == "Jardín de menor consumo hídrico":
             return parcial_menor_consumo(db, ancho, largo, db_original)
-        elif nombre == "Jardín más colorido":
+        elif nombre == "Jardín mas colorido":
             return parcial_colorido(db, ancho, largo, db_original)
         elif nombre == "Jardín mas atractivo para polinizadores":
             return parcial_polinizadores(db, ancho, largo, db_original)
