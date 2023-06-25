@@ -46,6 +46,8 @@ def salida_entero(db, nombre, ancho, largo, db_original):
     if len(plantas1) > 0:
         n_bloquecen = int(int(ancho)*int(largo)*0.7/4)
         n_ind_bloquecen = n_bloquecen // len(plantas1)
+        if n_ind_bloquecen == 0:
+            n_ind_bloquecen = 1
         n_bloquecen = n_ind_bloquecen * len(plantas1)
     else:
         n_bloquecen = 0
